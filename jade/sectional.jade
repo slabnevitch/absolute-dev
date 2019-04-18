@@ -1,0 +1,44 @@
+extends _misc/main
+
+block title
+	| Промышленные-секционные ворота
+
+block content
+	section.page-banner(data-src="img/sectional-banner-bg.jpg")
+		.abs-grd-top
+		.page-banner__inner
+			.wrapper
+				ul.breadcrumbs.breadcrumbs--on-dark
+					li
+						a(href="") Главная 
+					li
+						a(href="") Промышленные ворота
+					li.active
+						a(href="") Секционные ворота
+
+			.wrapper
+				.page-banner__content
+					h2 Секционные ворота со скидкой 30% на декабрь
+					.abs-subtitle Получите подробную консультацию и расчет стоимости 
+						br
+						| до начала работ бесплатно в день обращения
+
+					.page-banner__descr Получите бесплатную консультацию 
+						br
+						| и расчет стоимости ворот
+
+					a(href="#expect-popup").button.button-with-arrow.to-popup Получить консультацию и расчет
+						.button-arrow
+							+icon('arrow-left')
+	
+	include _sections/category-view
+	include _sections/category-price
+	include _sections/delivery-inst
+	include _sections/calculation
+	include _sections/construction
+	include _sections/automatic
+	include _sections/history-usual
+	include _sections/questions-usual
+
+block scripts
+	include _misc/scripts

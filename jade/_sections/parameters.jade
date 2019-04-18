@@ -1,0 +1,201 @@
+section.parameters
+	.wrapper.wrapper-jcc.no-pd-480
+		.parameters-wrap.tabs
+			ul.tabs__list.abs-tabs-list
+				li.tabs__item.abs-tabs-item.tabs__item--active
+					a.tabs__link.abs-tabs-link(href='#item1')
+						span Варианты 
+							br
+							| исполнения
+				li.tabs__item.abs-tabs-item
+					a.tabs__link.abs-tabs-link(href='#item2')
+						span Характеристики
+				li.tabs__item.abs-tabs-item
+					a.tabs__link.abs-tabs-link(href='#item3')
+						span Кон-ные элементы 
+				li.tabs__item.abs-tabs-item
+					a.tabs__link.abs-tabs-link(href='#item4')
+						span Комплектация
+				li.tabs__item.abs-tabs-item
+					a.tabs__link.abs-tabs-link(href='#item5')
+						span размеры
+				li.tabs__item.abs-tabs-item
+					a.tabs__link.abs-tabs-link(href='#item6')
+						span Опции
+				li.tabs__item.abs-tabs-item
+					a.tabs__link.abs-tabs-link(href='#item7')
+						span Аксессуары
+				li.tabs__item.abs-tabs-item
+					a.tabs__link.abs-tabs-link(href='#item8')
+						span Инструкции
+
+			ul.tabs__content.abs-tabs-content
+				li#item1.tabs__item.active
+					a(href="#").tabs-mob-toggle.active Варианты исполнения
+					.tabs-mob-content.parameters-content
+						.parameters-content__header
+							.parameters-content__title Виды панелей
+							p.parameters-content__descr Краткое описание. В какой ситуации использовать. Преимущества.
+
+						- var names = ['Центральня полоса', 'Доска', 'волна'];
+						
+						.parameters-tiles.parameters-tiles--variants
+							each name in names
+								.parameters-tile
+									.parameters-tile__img-wrap.wrap-bordered
+										img(data-src="img/model/tile-img.jpg", alt="").parameters-tile__img
+									.parameters-tile__name= name
+
+						.parameters-colors
+							.parameters-content__header
+								.parameters-content__title Цветовые решения
+								p.parameters-content__descr Краткое описание. В какой ситуации использовать. Преимущества.
+
+							.parameters-colors__items.wrapper-fluid
+								- for (var i=0; i < 20; i++)
+									.parameters-colors__item
+										.parameters-colors__frame
+											img(data-src="img/model/color-sample.jpg", alt="").parameters-colors__img
+										.parameters-colors__name RAL 1012
+
+				li#item2.tabs__item
+					a(href="#").tabs-mob-toggle Характеристики
+					.tabs-mob-content.parameters-content.parameters-content--padded
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quasi nostrum modi debitis, neque, fugit dignissimos magni perferendis fugiat fuga, rerum, mollitia quia harum ducimus! Dolores, quidem natus voluptatem quos.
+				li#item3.tabs__item
+					a(href="#").tabs-mob-toggle Кон-ные элементы
+					.parameters-content.tabs-mob-content
+						.parameters-content__header
+							.parameters-content__title Конструкция
+						
+						.parameters-tiles.parameters-tiles--complectation
+							.parameters-compl-visual
+								.parameters-compl-visual__img-wrap.wrap-bordered
+									img(data-src="img/model/long.jpg", alt="").parameters-compl-visual__img
+
+							.parameters-compl-text
+								- var params = ['Вертикальная направляющая', 'Угловая стойка', 'Вал октогональный', 'Устройство защиты от обрыва пружины для выносного монтажа',  'Кронштейн выносной для октогонального вала', 'Кронштейн выносной для октогонального вала, барабаны внутрь', 'Барабан намотки тросов алюминиевый', 'Верхний резиновый уплотнитель', 'Верхний кронштейн-опора с держателем ролика', 'Петля соединения полотен, внутренняя', 'Сэндвич-панель Doorhan', 'Боковой кронштейн-опора с держателем ролика', 'Устройство для защиты от разрыва троса', 'Верхний и нижний алюминиевый профиль', 'Пружинный амортизатор-отбойник', 'Уплотнитель резиновый боковой', 'Звездочка цепной передачи для дополнительного вала', 'Механизм натяжения цепи для системы двойного вала', 'Адаптер концевой', 'Балансирующий торсионный механизм', 'Подвижное окончание пружины', 'Профиль нижний и верхний алюминиевый, металлик', 'Боковая крышка-заглушка для сендвич-панелей', 'Ручка-ступенька'];
+								ul.parameters-list
+									each param in params
+										li= param
+
+
+				li#item4.tabs__item
+					a(href="#").tabs-mob-toggle комплектация
+					.tabs-mob-content.parameters-content
+						.parameters-content__header
+							.parameters-content__title Состав комплекта
+
+						.parameters-tiles.parameters-tiles--complectation
+							.parameters-compl-visual
+								.parameters-compl-visual__img-wrap.wrap-bordered
+									img(data-src="img/model/composition-img.jpg", alt="").parameters-compl-visual__img
+
+							.parameters-compl-text
+								- var params = ['Горизонтальные направляющие - 2 шт', 'Вертикальные направляющие - 2 шт', 'Полотно - 1 комплект', 'Торсионный механизм - 1 комплект', 'Ручка двухсторонняя - 1 шт', 'Ручная задвижка - 1 шт', 'Петли, ролики, кронштейны, крепеж - 1 комплект', ' Инструкции, документация - 1 комплект'];
+								ul.parameters-list
+									each param in params
+										li= param
+
+				li#item5.tabs__item
+					a(href="#").tabs-mob-toggle размеры
+					.tabs-mob-content.parameters-content
+						.parameters-sizes
+							
+							table.parameters-sizes__table
+								thead
+									tr
+										th
+											div
+												span Ширина
+
+										- for(var n=0; n<5;n++)
+											- for (var i=2000; i <3500 ; i++)
+												-if(i%250 == 0)
+													th
+														div
+															span= i
+								tbody
+									tr
+										td Высота
+										- for (var i=0; i <30 ; i++)
+											if(i<22)
+												td.parameters-cell-full
+											else
+												td
+									tr
+										td 2000
+										- for (var i=0; i <30 ; i++)
+											if(i<23)
+												td.parameters-cell-full
+											else
+												td
+									tr
+										td 2250
+										- for (var i=0; i <30 ; i++)
+											if(i<24)
+												td.parameters-cell-full
+											else
+												td
+									tr
+										td 2500
+										- for (var i=0; i <30 ; i++)
+											if(i<25)
+												td.parameters-cell-full
+											else
+												td
+									tr
+										td 2750
+										- for (var i=0; i <30 ; i++)
+											if(i<26)
+												td.parameters-cell-full
+											else
+												td
+									tr
+										td 3000
+										- for (var i=0; i <30 ; i++)
+											if(i<28)
+												td.parameters-cell-full
+											else
+												td
+									tr
+										td 3250
+										- for (var i=0; i <30 ; i++)
+											if(i<29)
+												td.parameters-cell-full
+											else
+												td
+									tr
+										td 2000
+										- for (var i=0; i <30 ; i++)
+											if(i<30)
+												td.parameters-cell-full
+											else
+												td
+
+									- for(var x=0; x<4;x++)
+										- for (var i=2250; i <3500 ; i++)
+											-if(i%250 == 0)
+												tr
+													td= i
+													- for (var m=0; m <30 ; m++)
+														td.parameters-cell-full
+
+				li#item6.tabs__item
+					a(href="#").tabs-mob-toggle опции
+					.tabs-mob-content.parameters-content
+						.parameters-tiles.parameters-tiles--options
+							- for (var i=0; i < 8; i++)
+								.parameters-tile
+									.parameters-tile__img-wrap.wrap-bordered
+										img(data-src="img/model/tile-img.jpg", alt="").parameters-tile__img
+									.parameters-tile__name Усиленные боковые опоры входят в комплектацию перекрывающих большие проемы ворот ISD01.
+				
+				li#item7.tabs__item
+					a(href="#").tabs-mob-toggle аксессуары
+					.tabs-mob-content.parameters-content.parameters-content--padded
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem dolorum illo obcaecati a, ratione debitis magnam eveniet repellendus provident odio sed in ea, quidem iste necessitatibus! Ducimus autem dolorem, fugit.
+				li#item8.tabs__item
+					a(href="#").tabs-mob-toggle инструкции
+					.tabs-mob-content.parameters-content.parameters-content--padded
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem dolorum illo obcaecati a, ratione debitis magnam eveniet repellendus provident odio sed in ea, quidem iste necessitatibus! Ducimus autem dolorem, fugit.

@@ -1,0 +1,32 @@
+/*--popular--*/
+.popular{
+	padding-top: rem(115px);
+	padding-bottom: rem(100px);
+	background: linear-gradient(161.58deg, rgba(67, 180, 221, 0.22) 2.97%, rgba(67, 180, 221, 0) 53.66%), #0A2139;
+	
+	.wrapper{
+		justify-content: center;
+		.title-wrapper{
+			width: calc(100% - 192px);
+				margin-bottom: rem(69px);
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.title-number{
+				color: #16537A;
+			}
+		}
+		
+	}
+}
+@media only screen and (max-width : 1600px){
+	.popular .wrapper .title-wrapper{
+		width: 100%;
+	}
+}
+/*--end popular--*/

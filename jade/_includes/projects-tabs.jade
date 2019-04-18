@@ -1,0 +1,46 @@
+.wrapper.wrapper-jcc.projects-tabs.tabs
+	ul.tabs__list.projects__tabs-list
+		li.tabs__item.tabs__item--active
+			a.tabs__link(href='#item1') Промышленные ворота
+		li.tabs__item
+			a.tabs__link(href='#item2') Двери
+		li.tabs__item
+			a.tabs__link(href='#item3') Шлагбаумы и приводы
+		li.tabs__item
+			a.tabs__link(href='#item4') Противопожарные ворота
+		li.tabs__item
+			a.tabs__link(href='#item5') Роллетные системы
+		li.tabs__item
+			a.tabs__link(href='#item6') Перегрузочное оборудование
+		li.tabs__item
+			a.tabs__link(href='#item7') Гаражные ворота
+
+	ul.tabs__content.projects__tabs-content
+		li#item1.tabs__item.active
+			.wrapper-fluid
+				include objects-content
+
+		li#item2.tabs__item
+			.wrapper-fluid
+				include objects-content
+		li#item3.tabs__item
+			.wrapper-fluid
+				include objects-content
+
+		li#item4.tabs__item
+			.wrapper-fluid
+				include objects-content
+		li#item5.tabs__item
+			.wrapper-fluid
+				include objects-content
+		li#item6.tabs__item
+			.wrapper-fluid
+				include objects-content
+		li#item7.tabs__item
+			.wrapper-fluid
+				include objects-content
+
+	.abs-button-wrapper
+		a(href="#object-popup").button.button-with-arrow.to-object-popup Показать еще проекты
+			.button-arrow
+				+icon('arrow-left')

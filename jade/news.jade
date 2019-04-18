@@ -1,0 +1,28 @@
+extends _misc/main
+
+block title
+	| Новости
+
+block content
+	section.news
+		img.abs-section-ellipse-left(data-src="img/section-bg-ellipse.png", alt="")
+			
+		.wrapper.wrapper-jcc
+			ul.breadcrumbs
+				li
+					a(href="") Главная 
+				li.active
+					a(href="") Все категории
+
+		.wrapper.wrapper-jcc
+			.title-wrapper.title-wrapper-centered
+				h2.abs-title-black Новости
+
+			include _includes/abs-previews
+
+			.previews-bottom
+				a(href="#").button Показать еще новости
+
+		
+block scripts
+	include _misc/scripts

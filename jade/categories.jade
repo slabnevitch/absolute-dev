@@ -1,0 +1,80 @@
+extends _misc/main
+
+block title
+	| Все категории
+
+block content
+	section.categories
+		img.categories-decor-left(data-src="img/categories/ell-left.png", alt="")
+		img.categories-decor-center(data-src="img/categories/ell-center.png", alt="")
+		.wrapper.wrapper-jcc
+			ul.breadcrumbs
+				li
+					a(href="") Главная 
+				li.active
+					a(href="") Все категории
+
+		.wrapper.wrapper-jcc
+			.title-wrapper
+				h2.abs-title-black все категории
+
+			.product-views
+				.product-views-item(data-src="img/product-views/1.jpg")
+					.product-views-item__bottom
+						.product-views-item__info
+							.product-views-item__name автоматические ворота
+							.product-views-item__price 1300 р / п.м.
+
+						a(href="#").button.button-mini Выбрать
+
+				.product-views-item(data-src="img/product-views/2.jpg")
+					.product-views-item__bottom
+						.product-views-item__info
+							.product-views-item__name Противопожарные ворота
+							.product-views-item__price 1300 р / п.м.
+
+						a(href="#").button.button-mini Выбрать
+
+				.product-views-item(data-src="img/product-views/3.jpg")
+					.product-views-item__bottom
+						.product-views-item__info
+							.product-views-item__name Гаражные ворота
+							.product-views-item__price 1300 р / п.м.
+
+						a(href="#").button.button-mini Выбрать
+
+				.product-views-item(data-src="img/product-views/4.jpg")
+					.product-views-item__bottom
+						.product-views-item__info
+							.product-views-item__name Шлагбаумы и приводы
+							.product-views-item__price 1300 р / п.м.
+
+						a(href="#").button.button-mini Выбрать
+
+				.product-views-item(data-src="img/product-views/5.jpg")
+					.product-views-item__bottom
+						.product-views-item__info
+							.product-views-item__name двери
+							.product-views-item__price 1300 р / п.м.
+
+						a(href="#").button.button-mini Выбрать
+
+				.product-views-item(data-src="img/product-views/6.jpg")
+					.product-views-item__bottom
+						.product-views-item__info
+							.product-views-item__name Роллетные системы
+							.product-views-item__price 1300 р / п.м.
+
+						a(href="#").button.button-mini Выбрать
+			
+				.product-views-item(data-src="img/product-views/7.jpg")
+					.product-views-item__bottom
+						.product-views-item__info
+							.product-views-item__name автоматические ворота
+							.product-views-item__price 1300 р / п.м.
+
+						a(href="#").button.button-mini Выбрать
+	include _sections/questions-usual
+
+block scripts
+	include _misc/scripts

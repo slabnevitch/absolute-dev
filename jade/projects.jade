@@ -1,0 +1,26 @@
+extends _misc/main
+
+block title
+	| наши проекты
+
+block content
+	section.projects
+		img.abs-section-ellipse-left(data-src="img/section-bg-ellipse.png", alt="")
+		
+		.wrapper.wrapper-jcc
+			ul.breadcrumbs
+				li
+					a(href="") Главная 
+				li.active
+					a(href="") Наши проекты
+
+		.wrapper.wrapper-jcc
+			.title-wrapper.title-wrapper-centered
+				h2.abs-title-black наши проекты
+
+		include _includes/projects-tabs
+	
+	include _sections/questions-usual
+		
+block scripts
+	include _misc/scripts

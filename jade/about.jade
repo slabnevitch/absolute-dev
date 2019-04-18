@@ -1,0 +1,136 @@
+extends _misc/main
+
+block title
+	| О компании
+
+block content
+	include _sections/about
+
+	section.company.company--dark
+
+		.wrapper.wrapper-jcc.company-top
+			.title-wrapper.title-wrapper-centered
+				.title-wrapper__block
+					h2 Компания АБСОЛЮТ-СЕРВИС
+					.abs-subtitle надежный поставщик ворот и автоматики с 2014 г.
+		
+			.company-content
+				.company-item
+					.company-item__icon
+						.company-item__icon-inner.svg-icon-bg(data-src="img/svg/puzzle.svg")
+						.company-item__icon-round.company-item__icon-round--1
+						.company-item__icon-round.company-item__icon-round--2
+					p
+						| делаем упор на 
+						br 
+						|практичность 
+						br
+						| #[strong продукции]
+				
+				.company-item
+					.company-item__icon
+						.company-item__icon-inner.svg-icon-bg(data-src="img/svg/personal-profile.svg")
+						.company-item__icon-round.company-item__icon-round--1
+						.company-item__icon-round.company-item__icon-round--2
+					p
+						| самые 
+						br 
+						| высококлассные 
+						br 
+						|специалисты 
+						br
+						| #[strong только у нас]
+
+				.company-item
+					.company-item__icon
+						.company-item__icon-inner.svg-icon-bg(data-src="img/svg/partner.svg")
+						.company-item__icon-round.company-item__icon-round--1
+						.company-item__icon-round.company-item__icon-round--2
+					p
+						| репутация надежного 
+						br 
+						| партнера 
+						br
+						| #[strong наша визитная карточка в ]
+						br
+						| #[strong мире бизнеса]
+
+				.company-item
+					.company-item__icon
+						.company-item__icon-inner.svg-icon-bg(data-src="img/svg/award.svg")
+						.company-item__icon-round.company-item__icon-round--1
+						.company-item__icon-round.company-item__icon-round--2
+					p
+						| только лучшую  
+						br 
+						| продукцию  
+						br
+						| #[strong выбираем и предлагаем с ]
+						br
+						| #[strong учетом новейших технологий]
+
+				.company-item
+					.company-item__icon
+						.company-item__icon-inner.svg-icon-bg(data-src="img/svg/puzzle.svg")
+						.company-item__icon-round.company-item__icon-round--1
+						.company-item__icon-round.company-item__icon-round--2
+					p
+						| делаем упор на 
+						br 
+						|практичность 
+						br
+						| #[strong продукции]
+
+				.company-item
+					.company-item__icon
+						.company-item__icon-inner.svg-icon-bg(data-src="img/svg/personal-profile.svg")
+						.company-item__icon-round.company-item__icon-round--1
+						.company-item__icon-round.company-item__icon-round--2
+					p
+						| самые 
+						br 
+						| высококлассные 
+						br 
+						|специалисты 
+						br
+						| #[strong только у нас]
+
+				.company-item
+					.company-item__icon
+						.company-item__icon-inner.svg-icon-bg(data-src="img/svg/idea.svg")
+						.company-item__icon-round.company-item__icon-round--1
+						.company-item__icon-round.company-item__icon-round--2
+					p
+						| мы всегда в курсе 
+						br 
+						| последних новшеств 
+						br
+						| #[strong на рынке]
+
+				.company-item
+					.company-item__icon
+						.company-item__icon-inner.svg-icon-bg(data-src="img/svg/hands.svg")
+						.company-item__icon-round.company-item__icon-round--1
+						.company-item__icon-round.company-item__icon-round--2
+					p
+						| индивидуальный 
+						br 
+						| подход 
+						br
+						| #[strong к каждому клиенту]
+	
+	include _sections/abs-textblock
+
+	section.projects.projects--usual
+		.wrapper.wrapper-jcc
+			.title-wrapper.title-wrapper-centered
+				h2.abs-title-black наши проекты
+
+		include _includes/projects-tabs
+
+
+	include _sections/calculation-light
+	include _sections/questions-usual
+	
+block scripts
+	include _misc/scripts

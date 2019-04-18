@@ -1,0 +1,135 @@
+footer.footer
+	.wrapper.no-pd-480
+		.footer-column
+			.footer-logo
+				a(href="#")
+					img(src="img/as_blue-01.png", alt="alt")
+				p Продажа, монтаж и сервис 
+					br
+					| ворот, дверей и автоматики
+
+		.footer-column
+			.footer-column__block
+				a(href="#").footer-title Продукция
+
+				- var menu1 = ['Промышленные ворота', 'Двери', 'Противопожарные ворота', 'Шлагбаумы и приводы', 'Перегрузочное оборудование', 'Роллетные системы', 'Гаражные ворота'];
+
+				ul.footer-menu
+					each item in menu1
+						li
+							a(href="#")= item
+			
+			.footer-column__block
+				a(href="#").footer-title Услуги
+				ul.footer-menu
+					li
+						a(href="#") Монтаж
+					li
+						a(href="#") Ремонт и сервис
+		
+
+		.footer-column
+			.footer-column__block
+				a(href="#").footer-title Клиентам
+
+				- var menu2 = ['Акции', 'Прайс-листы', 'Калькулятор', 'Доставка', 'Оплата'];
+
+				ul.footer-menu
+					each item in menu2
+						li
+							a(href="#")= item
+
+			.footer-column__block
+				a(href="#").footer-title Помощь
+
+				- var menu3 = ['Вопросы-ответы', 'Статьи', ' Карта сайта'];
+
+				ul.footer-menu
+					each item in menu3
+						li
+							a(href="#")= item
+
+		.footer-column
+			.footer-column__block
+				a(href="#").footer-title О компании
+
+				- var menu4 = ['О нас', 'Выполненные проекты', 'Новости', 'Партнеры', 'Контакты'];
+
+				ul.footer-menu
+					each item in menu4
+						li
+							a(href="#")= item
+
+		.footer-column
+			.footer-column__block
+				a(href="#").footer-title Присоединяйтесь
+
+				- var menu4 = ['Facebook', 'Вконтакте', 'Twitter', 'Instagram', 'YouTube', 'LinkedIn', 'Blog'];
+
+				ul.footer-menu
+					each item in menu4
+						li
+							a(href="#")= item
+
+		.footer-column.footer-column--contacts
+			.phone-block
+				+icon('phone')
+				a(href="tel:+74996811168") +7 (499) 68-111-68
+				a(href="#").footer-call Заказать звонок
+			
+			a(href="#order-popup").button.button-with-icon.button-with-icon--on-dark.button-with-icon-mini.to-popup Вызвать замерщика
+				.button-icon
+					+icon('helmet')
+
+			.footer-socials
+				a(href="#").abs-soc-item
+					+icon('skype')
+				a(href="#").abs-soc-item
+					+icon('whatsapp')
+				a(href="#").abs-soc-item
+					+icon('telegram')
+
+
+			.footer-icons-hidden
+				.footer-socials.footer-socials--mob
+					a(href="#").abs-soc-item
+						+icon('vk')
+					a(href="#").abs-soc-item
+						+icon('instagram')
+					a(href="#").abs-soc-item
+						+icon('facebook')
+
+				.footer-socials.footer-socials--mob
+					a(href="#").abs-soc-item
+						+icon('skype')
+					a(href="#").abs-soc-item
+						+icon('whatsapp')
+					a(href="#").abs-soc-item
+						+icon('telegram')
+
+			address.footer-address Адрес офиса: 
+				br
+				| г. Москва, м. Крылатское, ул. 
+				br
+				| Маршала Тимошенко
+
+				ul.footer-menu.footer-menu--mob
+					li
+						a(href="#") Реквизиты
+					li
+						a(href="#") Политика конфиденциальности
+			
+			.footer-socials
+				a(href="#").abs-soc-item
+					+icon('vk')
+				a(href="#").abs-soc-item
+					+icon('instagram')
+				a(href="#").abs-soc-item
+					+icon('facebook')
+
+			ul.footer-menu
+				li
+					a(href="#") Реквизиты
+				li
+					a(href="#") Политика конфиденциальности
+		

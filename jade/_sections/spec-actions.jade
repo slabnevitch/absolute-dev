@@ -1,0 +1,28 @@
+section.spec-actions
+	.wrapper
+		.title-wrapper.text-center
+			h2.abs-title-black Специальные предложения
+
+		.spec-actions__content
+			- for (var i=0; i < 2; i++)
+				a(href="#").spec-actions__item
+					.spec-actions__img-wrap
+						.spec-actions__sale -3%
+						img(src="img/spec-actions/1.jpg", alt="alt").spec-actions__img
+
+					.spec-actions__caption Социальная акция. Скидка 
+						br
+						| пенсионерам 3%
+
+				a(href="#").spec-actions__item
+					.spec-actions__img-wrap
+						.spec-actions__sale -3%
+						img(src="img/spec-actions/2.jpg", alt="alt").spec-actions__img
+
+					.spec-actions__caption Скидка 3% при заказе забора
+
+				a(href="#").spec-actions__item
+					.spec-actions__img-wrap
+						img(src="img/spec-actions/2.jpg", alt="alt").spec-actions__img
+
+					.spec-actions__caption Марафон подарков

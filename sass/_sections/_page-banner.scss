@@ -1,0 +1,43 @@
+/*--page-banner--*/
+.page-banner{
+	position: relative;
+	padding-bottom: rem(134px);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__inner{
+		position: relative;
+		z-index: 1;
+	}
+
+	&:before{
+		content: '';
+		@extend .cover;
+	}
+
+	.wrapper{
+		justify-content: center;
+
+		.breadcrumbs,
+		.page-banner__content{
+			@include col-16();
+			@include col-lg_1500-18();
+		}
+
+		.page-banner__content{
+			.abs-subtitle{
+				margin-bottom: rem(109px);
+				font-size: rem(36px);
+				line-height: normal;
+			}
+		}
+		.page-banner__descr{
+		    margin-bottom: 33px;
+			  color: #E2B33F;
+			  font-family: "RobotoSlabBold", sans-serif;
+		}
+	}
+}
+
+/*--end page-banner--*/

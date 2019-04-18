@@ -1,0 +1,60 @@
+/*--diler--*/
+.diler{
+	padding-top: rem(113px);
+	padding-bottom: rem(85px);
+
+	.wrapper{
+		justify-content: center;
+		.title-wrapper{
+			margin-bottom: rem(80px);
+			h2{
+				margin-bottom: rem(24px);
+			}
+			.abs-subtitle{
+				color: #000;
+
+			}
+		}
+
+		.diler-logos{
+			@include col();
+			@include col-15();
+			@include col-lg_1500-18();
+			@include lg_1200(justify-content, flex-start);
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: rem(62px);
+			flex-wrap: wrap;
+
+			.diler-logo{
+				@include col();
+				@include col-lg_1200-6();
+				@include col-sm-9();
+				@include col-xs-18();
+				text-align: center;
+				// flex: 1 1 0;
+			}
+			.diler-logo-img{
+				max-width: 100%;
+			}
+		}
+		.diler-description{
+			@include col();
+			@include col-18();
+			text-align: center;
+		}
+	}
+}
+@media only screen and (max-width : 1200px){
+	.diler .wrapper .diler-logos .diler-logo{
+		margin-bottom: 30px;
+
+
+	}
+}
+/*--end diler--*/

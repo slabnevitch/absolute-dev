@@ -1,0 +1,111 @@
+/*--delivery-inst--*/
+.delivery-inst{
+	padding-top: 53px;
+	background-color: $l-blue;
+
+	&--bordered{
+		border-bottom: 1px solid #68A7CF;
+	}
+
+	.wrapper{
+		.title-wrapper{
+			h2{
+				margin-bottom: rem(69px);
+				
+			}
+		}
+
+	}
+
+	.delivery-inst__bottom{
+		justify-content: center;
+		
+		.delivery-inst__content{
+			@include col();
+			@include col-16();
+			@include col-md-18();
+			justify-content: space-between;
+		}
+
+		.delivery-inst-item{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: rem(67px);
+		}
+		.delivery-inst-item__icon{
+			flex-shrink: 0;
+			margin-right: 38px;
+		}
+		.delivery-inst-item__title{
+			margin-bottom: 8px;
+			font-size: rem(24px);
+			font-family: $r-b;
+		}
+		.delivery-inst-item__text{
+			ul{
+				li{
+					margin-bottom: 5px;
+					list-style-type: none;
+					font-family: $r-l;
+					line-height: 25px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 1500px){
+	.delivery-inst .delivery-inst__bottom .delivery-inst-item{
+		@include col();
+		@include col-9();
+	}
+}
+@media only screen and (max-width : 980px){
+	.delivery-inst .delivery-inst__bottom .delivery-inst-item__text ul li{
+		font-size: 16px;
+		line-height: normal;
+		
+	}
+}
+@media only screen and (max-width : 768px){
+	.delivery-inst .delivery-inst__bottom .delivery-inst-item{
+		@include col-sm-18();
+	}
+	.delivery-inst .delivery-inst__bottom .delivery-inst-item__icon{
+		display: none !important;
+	}
+	.delivery-inst .delivery-inst__bottom .delivery-inst-item__title{
+		font-size: 20px;
+	}
+	.delivery-inst .delivery-inst__bottom .delivery-inst-item__text ul li{
+		display: inline-block;
+		font-size: 18px;
+
+		br{
+			display: none;
+		}
+	}
+}
+@media only screen and (max-width : 480px){
+	.delivery-inst{
+		padding-top: 30px;
+	}
+	.delivery-inst .delivery-inst__bottom .delivery-inst-item__title{
+		font-size: 16px;
+	}
+	.delivery-inst .delivery-inst__bottom .delivery-inst-item__icon{
+		max-width: 40px;
+		margin-right: 15px;
+	}
+	.delivery-inst .delivery-inst__bottom .delivery-inst-item{
+		width: 100%;
+	}
+	.delivery-inst .delivery-inst__bottom .delivery-inst-item__text ul li{
+		font-size: 14px;
+	}
+}
+/*--end delivery-inst--*/

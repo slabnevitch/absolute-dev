@@ -1,0 +1,17 @@
+/*--automatic--*/
+.automatic{
+	padding-top: rem(70px);
+	padding-bottom: rem(100px);
+	background-color: $l-blue;
+	.wrapper{
+		justify-content: center;
+
+		.title-wrapper{
+			h2{
+				margin-bottom: rem(70px);
+			}
+		}
+	}
+}
+
+/*--end automatic--*/

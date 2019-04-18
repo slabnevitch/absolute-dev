@@ -1,0 +1,20 @@
+section.also
+	.wrapper
+		.title-wrapper.text-center
+			h2.abs-title-black смотрите также
+
+		.abs-previews
+			- for (var i=1; i < 4; i++)
+				.abs-preview
+					.abs-preview__frame
+						img.abs-preview__img(data-src="img/news/0"+ i +".jpg", alt="")
+					.abs-preview__title По своей сути рыбатекст является альтернативой
+					p.abs-preview__text Традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст
+
+					a(href="#").abs-preview__more Подробнее
+
+		.abs-button-wrapper
+			a(href="").button Все новости
+
+
+

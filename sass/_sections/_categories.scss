@@ -1,0 +1,33 @@
+/*--categories--*/
+.categories{
+	position: relative;
+	padding-bottom: rem(74px);
+	background-color: $l-blue;
+
+	.categories-decor-left{
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.categories-decor-center{
+		@include absolute-center;
+	}
+	.wrapper{
+		position: relative;
+		z-index: 1;
+		.title-wrapper{
+			@include col-16();
+			@include col-bigger-18();
+			h2{
+				margin-bottom: rem(48px);
+			}
+		}
+	}
+}
+@media only screen and (max-width : 1200px){
+	.categories .categories-decor-left,
+	.categories .categories-decor-center{
+		display: none !important;
+	}
+}
+/*--end categories--*/

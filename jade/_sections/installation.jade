@@ -1,0 +1,55 @@
+section.installation(data-src="img/installation/installatin-bg.jpg")
+	.wrapper.installation-top
+		.title-wrapper.title-wrapper-wide.text-center
+			h2 Установка и монтаж
+
+	.wrapper.installation-content
+		.installation-menu
+			ul.installation-list
+				li
+					.installation-list__hover
+					.installation-list__num 1
+					.installation-list__text Проверка ограждения на соответствие требованиям производителя
+
+				li.active
+					.installation-list__hover
+					.installation-list__num 2
+					.installation-list__text Первичная подготовка 
+						br 
+						| проема
+
+				li
+					.installation-list__hover
+					.installation-list__num 3
+					.installation-list__text Покрытие основания 
+						br
+						| бетоном
+
+				li
+					.installation-list__hover
+					.installation-list__num 4
+					.installation-list__text Обшивка полотна 
+						br
+						| створки
+
+				li
+					.installation-list__hover
+					.installation-list__num 5
+					.installation-list__text Проверка 
+						br
+						| ограждения
+
+			a(href="#expect-popup").button.button-with-arrow.to-popup Подробнее о монтаже
+				.button-arrow
+					+icon('arrow-left')
+
+		.installation-view
+			.installation-display
+				- for (var i=0; i < 7; i++)
+					.installation-display__slide
+						img.installation-display__img(src="img/installation/inst-display.jpg", alt="")
+
+			.installation-nav
+				- for (var i=0; i < 7; i++)
+					.installation-nav__slide
+						img.installation-nav__img(src="img/installation/inst-nav-1.jpg", alt="")

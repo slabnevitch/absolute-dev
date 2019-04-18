@@ -1,0 +1,67 @@
+extends _misc/main
+
+block title
+	| Контакты
+
+block content
+	section.contacts
+		img.abs-section-ellipse-left(data-src="img/section-bg-ellipse.png", alt="")
+		.wrapper.wrapper-jcc
+			ul.breadcrumbs
+				li
+					a(href="") Главная 
+				li.active
+					a(href="") Контакты
+
+		.wrapper.wrapper-jcc.no-pd-480
+			.contacts-text
+				h2.abs-title-black Контакты
+				
+				.contacts-block.contacts-address
+					.contacts-block__row
+						.contacts-block__key Адрес:
+						.contacts-block__val г. Москва, м. Крылатское, ул. Маршала Тимошенко
+
+					.contacts-block__row
+						.contacts-block__key Телефон:
+						.contacts-block__val
+							a(href="tel:+7499681116") +7 (499) 68 111 68
+
+					.contacts-block__row
+						.contacts-block__key факс:
+						.contacts-block__val +7 (499) 140 48 27
+
+					.contacts-block__row
+						.contacts-block__key E-mail:
+						.contacts-block__val
+							a(href="mailto:OF@ABS-S.RU") OF@ABS-S.RU
+				
+				.contacts-block.contacts-service
+					.contacts-block__title Сервисный отдел
+					
+					.contacts-block__row
+						.contacts-block__key Телефон:
+						.contacts-block__val
+							a(href="tel:+79255177108 ") +7 (925) 517 71 08 
+					
+					.contacts-block__row
+						.contacts-block__key E-mail:
+						.contacts-block__val
+							a(href="mailto:OF@ABS-S.RU") SO@ABS-S.RU
+
+				.contacts-block.contacts-text__bottom
+					a(href="tel:+74996811168").contacts-block__title +7 (499) 68 111 68
+					.contacts-block__text Поможем Вам подобрать промышленные ворота, подскажем, как сэкономить, не теряя в качеcтве. Узнайте о текущих скидках и акциях
+
+				a(href="#expect-popup").button.button-with-arrow.to-popup Отправить заявку на расчет
+					.button-arrow
+						+icon('arrow-left')
+			
+			.contacts-map
+				.contacts-map__container.wrap-bordered#abs-map
+	include _sections/questions-usual
+		
+block scripts
+	include _misc/scripts
+	script(src="js/abs-map.js")
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_NAmCu9dm16a9i0oeX0T6rBQFgObeiZA&callback=initMap" async defer)

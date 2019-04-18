@@ -1,0 +1,244 @@
+/*--footer--*/
+.footer{
+	padding-top: rem(71px);
+	background: linear-gradient(171.53deg, rgba(67, 180, 221, 0.22) 2.97%, rgba(67, 180, 221, 0) 53.66%), #0A2139;
+	color: #fff;
+	.wrapper{
+		justify-content: space-between;
+
+		.footer-column{
+			margin-bottom: rem(65px);
+		}
+		.footer-logo{
+			a{
+				img{
+					max-width: 132px;
+				}
+			}
+			p{
+				padding-top: 18px;
+				line-height: 13px;
+				font-size: 12px;
+				color: #68A7CF;
+				border-top: 1px solid #316485;
+			}
+		}
+		.footer-column__block{
+			margin-bottom: rem(45px);
+		}
+		.footer-title{
+			display: inline-block;
+			text-decoration: none;
+			margin-bottom: 10px;
+			font-family: $r-l;
+			color: #fff;
+
+			&:hover, &:active{
+				text-decoration: underline;
+				color: $hover-blue;
+			}
+			
+		}
+		.footer-menu{
+			li{
+				list-style-type: none;
+				margin-bottom: 10px;
+				a{
+					color: #fff;
+					font-size: 14px;
+					font-family: $r-l;
+
+					&:hover{
+						color: $hover-blue;
+
+					}
+					&:active{
+						color: $accent;
+					}
+				}
+			}
+
+			&--mob{
+				display: none;
+			}
+		}
+		.footer-column--contacts{
+			min-width: 196px;
+			.footer-menu{
+				li{
+					margin-bottom: 0;
+					line-height: 14px;
+
+				}
+			}
+			
+			.button-with-icon-mini.button-with-icon--on-dark{
+				margin-bottom: 26px;
+
+				.button-icon{
+					.icon{
+						@include absolute-center;
+						font-size: 22px;
+						color: #fff;
+					}
+
+				}
+				&:hover{
+					border-color: #fff;
+					color: $hover-blue;
+					background-color: transparent;
+
+					.button-icon{
+						border-color: #fff;
+						.icon{
+							color: $hover-blue;
+						}
+					}
+				} 
+				&:active{
+					border-color: #fff;
+					color: $accent;
+
+					.button-icon{
+						.icon{
+							color: $accent;
+						}
+					}
+				}
+			}
+		}
+		.phone-block{
+			margin-bottom: 18px;
+
+			&:hover{
+				.footer-call{
+					color: $hover-blue;
+				}
+			}
+			&:active{
+				.footer-call{
+					color: $accent;
+				}
+			}
+		}
+		.footer-call{
+			display: block;
+			font-size: 14px;
+			margin-left: 30px;
+			text-decoration: underline;
+		}
+		.footer-socials{
+			margin-bottom: 24px;
+
+			&--mob{
+				display: none;
+			}
+		}
+		.footer-address{
+			margin-bottom: 29px;
+			font-size: 14px;
+			font-style: normal;
+			font-family: $r-l;
+		}
+	}
+}
+
+@media only screen and (max-width : 1200px){
+	
+	.footer .wrapper{
+		justify-content: flex-start;
+	}
+	.footer .wrapper .footer-column{
+		@include col();
+		@include col-6();
+	}
+	.footer .wrapper .footer-logo p{
+		max-width: 200px;
+	}
+	.footer .wrapper .footer-column--contacts .footer-menu--mob{
+		margin-top: 10px;
+	}
+}
+@media only screen and (max-width : 768px){
+	.footer{
+		padding-top: rem(40px);
+		
+	}
+	.footer .wrapper .footer-column{
+		margin-bottom: 10px;
+		@include col-sm-18();
+	}
+
+	.footer .wrapper .phone-block,
+	.footer .wrapper .footer-column--contacts .button-with-icon-mini.button-with-icon--on-dark,
+	.footer .wrapper .footer-column:not(.footer-column--contacts),
+	.footer .wrapper .footer-socials:not(.footer-socials--mob){
+		display: none;
+	}
+	.footer .wrapper .footer-socials--mob{
+		display: block;
+	}
+	.footer-column--contacts{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		
+	}
+	.footer .wrapper .footer-column--contacts .footer-menu:not(.footer-menu--mob){
+		display: none;
+	}
+	.footer .wrapper .footer-column--contacts .footer-menu--mob{
+		display: block;
+	}
+
+	.footer .wrapper .footer-icons-hidden{
+		.footer-socials{
+			margin-bottom: 15px;
+
+			
+		}
+	}
+	.footer-icons-hidden,
+	.footer .wrapper .footer-address{
+		width: 50%;
+	}
+}
+@media only screen and (max-width : 480px){
+	.footer-icons-hidden{
+		width: 40%;
+		.abs-soc-item{
+			margin-left: 10px;
+		}
+		
+	}
+	.footer .wrapper .footer-address{
+		width: 60%;
+	}
+	.footer .wrapper .footer-address,
+	.footer .wrapper .footer-column--contacts .footer-menu li a{
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+	.footer-icons-hidden .footer-socials{
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+	}
+}
+@media only screen and (max-width : 375px){
+	.footer-icons-hidden{
+		width: 45%;
+	}
+	.footer .wrapper .footer-address{
+		width: 55%;
+	}
+}
+/*--end footer--*/

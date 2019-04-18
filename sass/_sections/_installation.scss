@@ -1,0 +1,247 @@
+/*--installation--*/
+.installation{
+	position: relative;
+	padding-top: rem(118px);
+	padding-bottom: rem(78px);
+	background: center top no-repeat;
+	background-size: cover;
+
+	&:before{
+		content: '';
+		@extend .cover;
+		background: linear-gradient(162.69deg, rgba(67, 180, 221, 0.22) 2.97%, rgba(67, 180, 221, 0) 53.66%), #0A2139;
+opacity: 0.9;
+	}
+
+	&-top{
+		.title-wrapper{
+			h2{
+				margin-bottom: rem(88px);
+			}
+		}
+	}
+
+	.installation-content{
+		position: relative;
+		z-index: 1;
+
+		.installation-menu,
+		.installation-view{
+			@include col();
+			@include col-9();
+			@include col-md-18();
+		}
+
+		.installation-menu{
+			padding-left: rem(189px);
+			margin-top: -22px;
+
+			.button{
+				margin-top: rem(50px);
+			}
+		}
+
+		.installation-view{
+			padding-right: rem(96px);
+		}
+
+		.installation-list{
+			li{
+				position: relative;
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				align-items: flex-start;
+				// margin-bottom: rem(63px);
+				padding: 20px 0;
+				list-style-type: none;
+				color: #fff;
+				cursor: pointer;
+				
+
+				&.active,
+				&:hover, &:active{
+					.installation-list__hover{
+						display: block;
+					}
+				}
+			}
+
+			
+		}
+		.installation-list__hover{
+			content: '';
+			display: none;
+			position: absolute;
+			right: -30px;
+			top: 0;
+			height: 100%;
+			width: calc(100% + 9999px);
+			background-color: rgba(10, 33, 57, 0.8);
+			z-index: 0;
+		}
+		.installation-list__num{
+			position: relative;
+			z-index: 1;
+			margin-right: 67px;
+			font-size: rem(72px);
+			line-height: rem(72px);
+
+			// color: #fff;
+			font-family: $r-s-b;
+		}
+		.installation-list__text{
+			position: relative;
+			z-index: 1;
+			margin-top: 6px;
+			font-size: rem(24px);
+			line-height: rem(34px);
+			font-family: $r-b;
+
+		}
+
+		.installation-display{
+			margin-bottom: rem(63px);
+		}
+		.installation-nav{
+			.slick-prev{
+				left: -40px;
+			}
+			.slick-next{
+				right: -40px;
+			}
+		}
+		
+		.installation-display__slide{
+			height: 498px;
+			position: relative;
+		}
+		.installation-nav__slide{
+			height: 101px;
+			position: relative;
+			margin: 0 4px;
+			opacity: .4;
+			cursor: pointer;
+
+			&:hover, &:active{
+				opacity: 1;
+			}
+			
+		}
+		.installation-display__img,
+		.installation-nav__img{
+			@include absolute-center;
+		}
+
+
+	}
+}
+
+@media only screen and (max-width : 1600px){
+	.installation .installation-content .installation-display__slide{
+		height: 429px;
+	}
+	.installation .installation-content .installation-menu{
+		padding-left: 50px;
+	}
+}
+@media only screen and (max-width : 1400px){
+	.installation .installation-content .installation-display__slide{
+		height: 362px;
+	}
+}
+@media only screen and (max-width : 1300px){
+	.installation .installation-content .installation-list li{
+		padding: 12px 0;
+	}
+	.installation .installation-content .installation-display__slide{
+		height: 326px;
+	}
+}
+@media only screen and (max-width : 1200px){
+	.installation .installation-content .installation-menu{
+		padding-left: 0;
+	}
+	.installation .installation-content .installation-view{
+		padding-right: 0;
+	}
+	.installation .installation-content .installation-nav{
+		padding: 0 50px;
+
+	}
+
+	.installation .installation-content .installation-nav .slick-prev{
+		
+			left: 15px;
+	}
+	.installation .installation-content .installation-nav .slick-next{
+		
+			right: 15px;
+
+	}
+	.installation .installation-content .installation-list__num{
+		margin-right: 30px;
+	}
+}
+@media only screen and (max-width : 1200px){
+	.installation .installation-content .installation-nav__slide{
+		height: 61px;
+	}
+}
+@media only screen and (max-width : 980px){
+	.installation .installation-content .installation-menu .installation-list{
+		display: none;
+	}
+	.installation .installation-content .installation-menu{
+		order: 2;
+	}
+	.installation .installation-content .installation-display__slide{
+		height: 500px;
+	}
+	.installation .installation-content .installation-view{
+		margin-bottom: 30px;
+	}
+}
+@media only screen and (max-width : 768px){
+	.installation .installation-content .installation-display__slide{
+		height: 455px;
+
+	}
+	.installation .installation-content .installation-nav__slide{
+		height: 101px;
+	}
+	.installation .installation-content .installation-nav{
+		padding: 0;
+	}
+}
+@media only screen and (max-width : 560px){
+	.installation .installation-content .installation-display__slide{
+		height: 337px;
+	}
+}
+@media only screen and (max-width : 480px){
+
+	.installation .installation-content .installation-display__slide{
+		height: 266px;
+	}
+}
+@media only screen and (max-width : 375px){
+	.installation .installation-content .installation-display__slide{
+		height: 206px;
+	}
+	.installation .installation-content .installation-display{
+		margin-bottom: 10px;
+	}
+	.installation-top .title-wrapper h2{
+		margin-bottom: 30px;
+	}
+}
+@media only screen and (max-width : 320px){
+	.installation .installation-content .installation-display__slide{
+		height: 180px;
+	}
+}
+
+/*--end installation--*/

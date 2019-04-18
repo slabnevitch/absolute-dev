@@ -1,0 +1,44 @@
+section.main-slider
+	.main-slider__slider
+		- for(var i=0; i<3; i++)
+			.main-slider__slide
+				.abs-grd-top
+				.main-slider__bg(style="background-image: url(img/main-slider-bg.jpg)")
+					.main-slider__cover
+				
+				.wrapper.main-slider__content
+					.main-slider__text
+						h2 Все наши клиенты
+						.abs-subtitle не имеют проблем с установкой ворот
+						.main-slider__descr Получите бесплатную консультацию
+							br 
+							| и расчет стоимости ворот
+
+						a(href="#expect-popup").button.button-with-arrow.to-popup Получить консультацию и расчет
+							.button-arrow
+								+icon('arrow-left')
+						
+						.plus-marks
+							.plus-mark
+								.plus-mark__center
+									+icon('plus')
+
+								.plus-mark__content #[strong Мы официальные] 
+									br
+									| #[strong дилеры] проверенных производителей 
+
+							.plus-mark.plus-mark--2
+								.plus-mark__center
+									+icon('plus')
+
+								.plus-mark__content #[strong Мы официальные] 
+									br
+									| #[strong дилеры] проверенных производителей 
+
+							.plus-mark.plus-mark--3
+								.plus-mark__center
+									+icon('plus')
+
+								.plus-mark__content #[strong Мы официальные] 
+									br
+									| #[strong дилеры] проверенных производителей 

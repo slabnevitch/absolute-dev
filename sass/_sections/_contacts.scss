@@ -1,0 +1,114 @@
+/*--contacts--*/
+.contacts{
+	position: relative;
+	padding-bottom: rem(83px);
+	background-color: $l-blue;
+
+	.wrapper{
+		position: relative;
+		z-index: 1;
+		@include lg_1600(justify-content, flex-start);
+
+		.contacts-text{
+			@include col();
+			@include col-6();
+			@include col-lg_1600-8();
+			@include col-lg-7();
+			@include col-md-18();
+			// outline: 1px solid red;
+
+			h2{
+				margin-bottom: rem(52px);
+			}
+
+			.contacts-block{
+				margin-bottom: 30px;
+				border-bottom: 1px solid #68A7CF;
+			}
+			.contacts-block__row{
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				align-items: flex-start;
+				margin-bottom: 25px;
+			}
+			.contacts-block__key{
+				width: 123px;
+				flex-shrink: 0;
+				text-transform: uppercase;
+			}
+			.contacts-block__val{
+				font-family: $r-l;
+				letter-spacing: -.2px;
+				a{
+					color: #000;
+					text-decoration: none;
+				}
+			}
+			.contacts-block__title{
+				margin-bottom: 26px;
+				font-size: rem(24px);
+				font-family: $r-b;
+				color: #000;
+			}
+			.contacts-text__bottom{
+				border-bottom: none;
+				.contacts-block__title{
+					display: block;
+					margin-bottom: 3px;
+					text-decoration: none;
+				}
+			}
+		}
+
+		.contacts-map{
+			@include col();
+			@include col-10();
+			@include col-lg-11();
+			@include col-md-18();
+
+			.contacts-map__container{
+				height: 737px;
+			}
+		}
+	}
+}
+@media only screen and (max-width : 1100px){
+	.contacts .wrapper .contacts-text{
+		.button{
+			width: 100%;
+		}
+	}
+}
+@media only screen and (max-width : 980px){
+	.contacts .wrapper .contacts-text{
+		margin-bottom: 15px;
+		.button{
+			width: 419px;
+		}
+	}
+}
+@media only screen and (max-width : 768px){
+	.contacts .wrapper .contacts-map .contacts-map__container {
+		height: 500px;
+	}
+}
+@media only screen and (max-width : 560px){
+	.contacts .wrapper .contacts-map .contacts-map__container {
+		height: 300px;
+	}
+	.contacts .wrapper .contacts-text .contacts-block__row{
+		font-size: 14px;
+	}
+	.contacts .wrapper .contacts-text .contacts-block__key{
+		width: 90px;
+	}
+}
+@media only screen and (max-width : 480px){
+	.contacts .wrapper .contacts-text .button{
+		width: 100%;
+	}
+}
+/*--end contacts--*/

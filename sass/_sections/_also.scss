@@ -1,0 +1,25 @@
+/*--also--*/
+.also{
+	padding-top: rem(64px);
+	padding-bottom: rem(111px);
+
+	.wrapper{
+		.title-wrapper{
+			h2{
+				margin-bottom: rem(39px);
+			}
+		}
+
+		.abs-button-wrapper{
+			.button{
+				width: 420px;
+			}
+		}
+	}
+}
+@media only screen and (max-width : 480px){
+	.also .wrapper .abs-button-wrapper .button{
+		width: 100%;
+	}
+}
+/*--end also--*/

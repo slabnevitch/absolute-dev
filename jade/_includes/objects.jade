@@ -1,0 +1,20 @@
+.objects-content
+	- for(var i=1; i<7; i++)
+		.objects-item
+			.objects-item__cover
+			.objects-item__img(data-src="img/history/"+i+".jpg")
+				.objects-item__text
+					.objects-item__title= "Объект " + i
+					.objects-item__location Московская область
+
+					.objects-item__links
+						a(href="#") Промышленные
+						a(href="#") Секционные ворота
+						br
+						a(href="#") Дорхан
+						a(href="#") Шлагбаум
+						a(href="#") Дорхан
+
+		a(href="#object-popup").button.button-mini.to-object-popup Подробнее
+
+			.objects-item__caption= "Объект " + i

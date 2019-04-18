@@ -1,0 +1,107 @@
+/*--spec-actions--*/
+.spec-actions{
+	padding-top: rem(88px);
+	padding-bottom: rem(87px);
+	background-color: $l-blue;
+	.wrapper{
+		justify-content: center;
+		.title-wrapper{
+			@include col-18();
+
+			h2{
+				margin-bottom: rem(93px);
+			}
+		}
+
+		.spec-actions__content{
+			@include col();
+			@include col-17();
+
+			.slick-prev{
+				left: -35px;
+			}
+			.slick-next{
+				right: -35px;
+			}
+
+			.spec-actions__item{
+				display: block;
+				text-align: center;
+				text-decoration: none;
+
+				.spec-actions__caption{
+					color: #000;
+					text-decoration: underline;
+				}
+
+				&:hover, &:active{
+					text-decoration: none;
+					.spec-actions__caption{
+						color: $hover-blue;
+						text-decoration: underline;
+					}
+				}
+				
+			}
+			.spec-actions__img-wrap{
+				position: relative;
+				height: 376px;
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 458px;
+				margin-bottom: 33px;
+				overflow: hidden;
+			}
+			.spec-actions__sale{
+				height: 190px;
+				width: 190px;
+				position: absolute;
+				top: -95px;
+				right: -95px;
+				background-color: $accent;
+				transform: rotate(45deg);
+				z-index: 1;
+				font-size: 36px;
+				font-family: $r-b;
+				text-align: center;
+				line-height: 300px;
+				color: #000;
+			}
+			.spec-actions__img{
+				@include absolute-center;
+				top: 0;
+				transform: translateX(-50%);
+			}
+			.spec-actions__caption{
+				font-size: 24px;
+				font-family: $r-l;
+				color: #000;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 560px){
+.spec-actions .wrapper .spec-actions__content .spec-actions__img-wrap{
+	max-width: 375px;
+	height: 312px;
+}
+	.spec-actions .wrapper .spec-actions__content .slick-prev,
+	.spec-actions .wrapper .spec-actions__content .slick-next{
+		margin-top: -10%;
+	}
+}
+	
+@media only screen and (max-width : 480px){
+	.spec-actions .wrapper .spec-actions__content .spec-actions__img-wrap {
+		max-width: 320px;
+		height: 250px;
+	}
+}
+@media only screen and (max-width : 320px){
+	.spec-actions .wrapper .spec-actions__content .spec-actions__img-wrap{
+		height: 200px;
+	}
+}
+
+/*--end spec-actions--*/

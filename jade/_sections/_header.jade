@@ -1,0 +1,109 @@
+header.header
+	.header-top
+		.wrapper
+			a(href="#").toggle-mnu
+				span
+
+			.abs-logo
+				a(href="#")
+					img(src="img/as_yellow-01.png", alt="alt")
+				p Продажа, монтаж и сервис
+					br
+					| ворот, дверей и автоматики
+
+			- var menus = ['Калькулятор', 'Акции', 'Отзывы', 'Контакты'];
+			
+			ul.header-menu.sf-menu
+				li
+					a(href="#") Продукция
+					ul.header-menu__list
+						li.header-menu__item
+							a(href="#") Промышленнные ворота
+
+							ul.header-menu__sublist
+
+								-for(var i=0; i<11; i++)
+									li
+										a(href="#") Подкатегория раздела
+
+						li.header-menu__item
+								a(href="#") Секционные ворота
+
+								ul.header-menu__sublist
+
+									-for(var i=0; i<11; i++)
+										li
+											a(href="#") Подкатегория раздела
+
+						li.header-menu__item
+							a(href="#" data-hover="hover-on-link") гаражные ворота
+
+							ul.header-menu__sublist
+
+								-for(var i=0; i<7; i++)
+									li
+										a(href="#") Подкатегория раздела
+
+						li.header-menu__item
+							a(href="#" data-hover="hover-on-link") шлагбаумы и приводы
+
+							ul.header-menu__sublist
+								-for(var i=0; i<7; i++)
+									li
+										a(href="#") Подкатегория раздела
+
+						li.header-menu__item
+							a(href="#" data-hover="hover-on-link") двери
+
+							ul.header-menu__sublist
+								-for(var i=0; i<7; i++)
+									li
+										a(href="#") Подкатегория раздела
+						
+
+						li.header-menu__item
+							a(href="#" data-hover="hover-on-link") роллетные системы
+
+							ul.header-menu__sublist
+
+								-for(var i=0; i<7; i++)
+									li
+										a(href="#") Подкатегория раздела
+
+				li
+					a(href="#") Услуги
+					ul.header-menu__list
+						li.header-menu__item
+							a(href="#") Монтаж
+
+							ul.header-menu__sublist
+
+								-for(var i=0; i<11; i++)
+									li
+										a(href="#") Подкатегория раздела
+
+						li.header-menu__item
+								a(href="#") Ремонт и сервис
+
+								ul.header-menu__sublist
+
+									-for(var i=0; i<11; i++)
+										li
+											a(href="#") Подкатегория раздела
+											
+				each menu in menus
+					li
+						a(href="#")= menu
+
+			.header-contacts
+
+				a(href="#order-popup").header-helmet.svg-icon-bg.to-popup
+					+icon('helmet')
+
+				.phone-block
+					+icon('phone')
+					a(href="tel:+74996811168") +7 (499) 68-111-68
+
+				a(href="#callback-popup").button.header-call.to-popup Заказать звонок
+
+	include ../_includes/hidden-menu

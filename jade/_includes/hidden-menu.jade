@@ -1,0 +1,158 @@
+.header-hd-menu
+	.header-hd-menu__inner
+		.wrapper
+			.header-hd-menu__top
+				a(href="#").toggle-mnu.on
+					span
+				label.header-hd-menu__search
+					input.header-hd-menu__field(type="text")
+					.header-hd-menu__mag.svg-icon-bg(data-src="img/svg/search.svg")
+
+			.header-hd-menu__button
+				a(href="#order-popup").button.button-with-icon.button-with-icon--on-dark.to-popup Вызвать замерщика
+					.button-icon
+						+icon('helmet')
+				
+		
+		.wrapper
+			.header-hd-menu__left
+				.header-hd-menu__column
+					.header-hd-menu__block
+						a(href="#").header-hd-menu__main Продукция
+						ul.header-hd-menu__list
+							li.header-hd-menu__item
+								a(href="#" data-hover="hover-on-link") Промышленнные ворота
+
+								ul.header-hd-menu__sublist
+
+									-for(var i=0; i<11; i++)
+										li
+											a(href="#") Подкатегория раздела
+
+						ul.header-hd-menu__list
+							li.header-hd-menu__item
+								a(href="#" data-hover="hover-on-link") Секционные ворота
+
+								ul.header-hd-menu__sublist
+
+									-for(var i=0; i<11; i++)
+										li
+											a(href="#") Подкатегория раздела
+
+						ul.header-hd-menu__list
+							li.header-hd-menu__item
+								a(href="#" data-hover="hover-on-link") гаражные ворота
+
+								ul.header-hd-menu__sublist
+
+									-for(var i=0; i<7; i++)
+										li
+											a(href="#") Подкатегория раздела
+
+						ul.header-hd-menu__list
+							li.header-hd-menu__item
+								a(href="#" data-hover="hover-on-link") шлагбаумы и приводы
+
+								ul.header-hd-menu__sublist
+									-for(var i=0; i<7; i++)
+										li
+											a(href="#") Подкатегория раздела
+
+						ul.header-hd-menu__list
+							li.header-hd-menu__item
+								a(href="#" data-hover="hover-on-link") двери
+
+								ul.header-hd-menu__sublist
+									-for(var i=0; i<7; i++)
+										li
+											a(href="#") Подкатегория раздела
+
+						ul.header-hd-menu__list
+							li.header-hd-menu__item
+								a(href="#" data-hover="hover-on-link") роллетные системы
+
+								ul.header-hd-menu__sublist
+
+									-for(var i=0; i<7; i++)
+										li
+											a(href="#") Подкатегория раздела
+
+				.header-hd-menu__column
+					.header-hd-menu__block
+						a(href="#").header-hd-menu__main Услуги
+						ul.header-hd-menu__list
+							li.header-hd-menu__item
+								a(href="#" data-hover="hover-on-link") монтаж
+
+								ul.header-hd-menu__sublist
+
+									-for(var i=0; i<5; i++)
+										li
+											a(href="#") Подкатегория раздела
+
+						ul.header-hd-menu__list
+							li.header-hd-menu__item
+								a(href="#" data-hover="hover-on-link") ремонт и сервис
+
+								ul.header-hd-menu__sublist
+
+									-for(var i=0; i<5; i++)
+										li
+											a(href="#") Подкатегория раздела
+					
+					.header-hd-menu__block
+						a(href="#").header-hd-menu__main Калькулятор
+
+					.header-hd-menu__block
+						a(href="#").header-hd-menu__main Акции
+
+					.header-hd-menu__block
+						a(href="#").header-hd-menu__main Отзывы
+
+					.header-hd-menu__block
+						a(href="#").header-hd-menu__main Контакты
+
+			.header-hd-menu__right
+				form.abs-form(action="#")
+					label.abs-form-label
+						span.abs-form-label-name Ваше имя
+						input.abs-form-input(type="text", name="" placeholder="Иван например")
+
+					label.abs-form-label
+						span.abs-form-label-name Ваш телефон
+						input.abs-form-input(type="text", name="" placeholder="+7 (___) ___-__-__")
+
+					label.abs-form-label
+						span.abs-form-label-name E-mail
+						input.abs-form-input(type="text", name="" placeholder="your@mail")
+
+					.abs-form__custom-policy
+						label.abs-form-custom
+							input.abs-form-check(type="checkbox", name="" checked required)
+							span.abs-form__custom-chek
+						span.abs-form__policy Я согласен с #[a(href="#") Политикой конфидициальности]
+
+					button.button.button-wide(type="submit") Получить консультацию
+				
+				.header-hd-menu__contacts
+					.header-hd-menu__contacts-top
+						.header-hd-menu__call
+							a(href="tel:+74996811168") +7 (499) 68-111-68 
+							a(href="#callback-popup").button.button-mini.button-inverse.to-popup Заказать звонок
+						
+						.header-hd-menu__social
+							a(href="#").abs-soc-item
+								+icon('skype')
+							a(href="#").abs-soc-item
+								+icon('whatsapp')
+							a(href="#").abs-soc-item
+								+icon('telegram')
+
+					.header-hd-menu__contacts-bottom
+						a(href="#").abs-soc-item
+							+icon('vk')
+						a(href="#").abs-soc-item
+							+icon('instagram')
+						a(href="#").abs-soc-item
+							+icon('facebook')
+	

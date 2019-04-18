@@ -1,0 +1,124 @@
+/*--product-views--*/
+.product-views{
+	// @include col();
+	// @include col-17();
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: calc(100% - 192px);
+	// @include row-flex();
+	flex-wrap: wrap;
+	margin-left: -9px;
+	margin-right: -9px;
+
+	.product-views-item{
+		position: relative;
+		width: calc(33.333333% - 18px);
+		// width: 33.333333%;
+		height: 330px;
+		margin-left: 9px;
+		margin-right: 9px;
+		margin-bottom: 20px;
+		background: center top no-repeat;
+		background-size: cover;
+
+		&:hover, &:active{
+			.product-views-item__bottom{
+				background-color: #fff;
+
+				.button-mini{
+					background-color: $accent;
+					color: #fff;
+				}
+				.product-views-item__name,
+				.product-views-item__price{
+					color: #000;
+				}
+			}
+		}
+		
+	}
+	.product-views-item__bottom{
+		position: absolute;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		padding: 19px 15px 8px 25px;
+		background: rgba(10, 33, 57, 0.8);
+
+		.button-mini{
+			flex-shrink: 0;
+			margin-left: 10px;
+			background: rgba(10, 33, 57, 0.8);
+			border: 1px solid #E2B33F;
+		}
+
+		.product-views-item__name{
+			font-size: 17.8px;
+			text-transform: uppercase;
+			color: $accent;
+		}
+		.product-views-item__price{
+			font-size: 17.8px;
+			font-family: $r-b;
+			color: #fff;
+		}
+	}
+}
+
+
+@media only screen and (max-width : 1600px){
+	.product-views{
+		width: 100%;
+	}
+}
+@media only screen and (max-width : 1400px){
+	.product-views .product-views-item{
+		width: calc(50% - 18px);
+	}
+}
+@media only screen and (max-width : 980px){
+	.popular .wrapper .title-wrapper{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.product-views .product-views-item__bottom{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.product-views .product-views-item__bottom .button-mini{
+		margin-left: 0;
+	}
+	.product-views-item__info{
+		margin-bottom: 10px;
+	}
+}
+@media only screen and (max-width : 768px){
+	.product-views .product-views-item{
+		width: 100%;
+	}
+	.title-number{
+		display: none;
+	}
+	.title-wrapper--numbered{
+		padding-left: 0;
+	}
+}
+@media only screen and (max-width : 560px){
+}
+// @media only screen and (max-width : 375px){
+// 	.product-views .product-views-item{
+// 		margin-left: 0;
+// 		margin-right: 0;
+// 	}
+// }
+/*--end product-views--*/

@@ -1,0 +1,28 @@
+extends _misc/main
+
+block title
+	| Акции
+
+block content
+	section.actions
+		img.abs-section-ellipse-left(data-src="img/section-bg-ellipse.png", alt="")
+			
+		.wrapper.wrapper-jcc
+			ul.breadcrumbs
+				li
+					a(href="") Главная 
+				li.active
+					a(href="") Aкции
+
+		.wrapper.wrapper-jcc
+			.title-wrapper.title-wrapper-centered
+				h2.abs-title-black Акции и специальные предложения
+
+			include _includes/abs-previews
+
+			.previews-bottom
+				a(href="#").button Показать еще акции
+
+		
+block scripts
+	include _misc/scripts

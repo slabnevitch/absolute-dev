@@ -1,0 +1,112 @@
+/*--consultation--*/
+.consultation{
+	padding-top: rem(142px);
+	padding-bottom: rem(148px);
+	// margin-bottom: rem(150px);
+	background:  url(../img/consultation-bg.jpg) center top no-repeat;
+	background-size: cover;
+	.wrapper{
+		justify-content: center;
+		position: relative;
+
+		.consultation-img{
+			position: absolute;
+			top: -300px;
+			left: 96px;
+		}
+
+		.title-wrapper,
+		.consultation-content{
+			@include col();
+			@include col-16();
+			@include col-lg_1400-18();
+			padding-left: 96px;
+		}
+		.title-wrapper{
+			margin-bottom: rem(141px);
+			h2{
+				margin-bottom: 30px;
+			}
+			.abs-subtitle{
+				font-size: rem(36px);
+			}
+		}
+		.consultation-content{
+			p{
+				margin-top: 0;
+				max-width: 516px;
+				margin-bottom: rem(33px);
+				font-family: $r-s-b;
+				color: #fff;
+			}
+			.consultation__button-wrapper{
+				position: relative;
+				display: inline-block;
+				img{
+					@include absolute-center;
+					max-width: initial;
+					max-height: initial;
+					z-index: 0;
+				}
+			}
+			.button{
+				width: 460px;
+				z-index: 1;
+
+			}
+		}
+	}
+}
+@media only screen and (max-width : 1920px){
+	.consultation .wrapper .consultation-img{
+		width: 90%;
+		left: 0;
+	}
+}
+@media only screen and (max-width : 1600px){
+	.consultation .wrapper .consultation-img{
+		top: -100px;
+	}
+}
+@media only screen and (max-width : 1400px){
+	
+	.consultation .wrapper .title-wrapper,
+	.consultation .wrapper .consultation-content{
+		padding-left: 0;
+	}
+}
+@media only screen and (max-width : 1200px){
+	.consultation{
+		padding-bottom: 70px;
+	}
+}
+@media only screen and (max-width : 768px){
+	.consultation .wrapper .title-wrapper .abs-subtitle{
+		display: none;
+	}
+	.consultation .wrapper .consultation-content p{
+		display: none;
+	}
+	.consultation .wrapper .consultation-img,
+	.consultation .wrapper .consultation-content .consultation__button-wrapper img{
+		display: none !important;
+	}
+	.consultation .wrapper .title-wrapper{
+		margin-bottom: 30px;
+	}
+
+}
+@media only screen and (max-width : 560px){
+	.consultation .wrapper .consultation-content .button{
+		width: auto;
+	}
+	.consultation .wrapper .consultation-content .consultation__button-wrapper{
+		display: block;
+	}
+}
+@media only screen and (max-width : 480px){
+	.consultation .wrapper .consultation-content .button{
+		width: 100%
+	}
+}
+/*--end consultation--*/

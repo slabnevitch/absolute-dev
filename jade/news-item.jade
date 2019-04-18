@@ -1,0 +1,70 @@
+extends _misc/main
+
+block title
+	| Новость
+
+block content
+	.news-item
+		section
+			.wrapper.wrapper-jcc
+				ul.breadcrumbs
+					li
+						a(href="") Главная 
+					li
+						a(href="") Новости
+					li.active
+						a(href="") Полное название новости
+	
+		section.news-item__block
+			.wrapper.no-pd-480
+				.news-item__inner
+					.title-wrapper.title-wrapper-wide
+						h2.abs-title-black полное название новости
+						.news-item__date-block
+							.news-item__date-icon.svg-icon-bg(data-src="img/svg/small-calendar.svg")
+							span.news-item__date-val 11.01.19
+
+					.news-item__top
+						.news-item__subtitle Подзаголовок
+						.news-item__paragraphs
+							.news-item__column Аллюзия возможна. Заимствование параллельно. Однако, исследователи постоянно сталкиваются с тем, что ямб осознаёт мифологический брахикаталектический стих, что связано со смысловыми оттенками, логическим выделением или с синтаксической омонимией. Однако, исследователи постоянно сталкиваются с тем, что ямб осознаёт мифологический брахикаталектический стих, что связано со смысловыми оттенками, логическим выделением или с синтаксической омонимией.
+
+							.news-item__column Аллюзия возможна. Заимствование параллельно. Однако, исследователи постоянно сталкиваются с тем, что ямб осознаёт мифологический брахикаталектический стих, что связано со смысловыми оттенками, логическим выделением или с синтаксической омонимией. Однако, исследователи постоянно сталкиваются с тем, что ямб осознаёт мифологический брахикаталектический стих, что связано со смысловыми оттенками, логическим выделением или с синтаксической омонимией.
+
+					.news-item__image-block
+							.news-item__block-img
+								img.news-item__pict(data-src="img/news/news-block-img.jpg", alt="")
+							.news-item__image-caption
+								.news-item__caption-inner
+									.news-item__subtitle Подзаголовок
+									p.news-item__image-block-text Аллюзия возможна. Заимствование параллельно. Однако, исследователи постоянно сталкиваются с тем, что ямб осознаёт мифологический брахикаталектический стих, что связано со смысловыми оттенками, логическим выделением или с синтаксической омонимией. Однако, исследователи постоянно сталкиваются с тем, что ямб осознаёт мифологический брахикаталектический стих, что связано со смысловыми оттенками, логическим выделением или с синтаксической омонимией.
+
+					.news-item__columns
+						.news-item__column
+							.news-item__subtitle Подзаголовок
+							- var columnText = ['Аллюзия возможна', 'Заимствование параллельно', 'Однако, исследователи постоянно сталкиваются', 'С тем, что ямб осознаёт мифологический', 'Брахикаталектический стих, что связано со смысловыми оттенками, логическим выделением или с синтаксической омонимией', 'Заимствование параллельно'];
+
+							ul.news-item__column-list.news-item__column-list--dashed
+								each item in columnText
+									li= item
+						
+						.news-item__column
+							.news-item__subtitle Подзаголовок
+							ol.news-item__column-list.news-item__column-list--numbered
+								each item in columnText
+									li= item
+
+						.news-item__column
+							.news-item__subtitle Подзаголовок
+							ul.news-item__column-list.news-item__column-list--dashed
+								each item in columnText
+									li= item
+
+					.news-item__video
+						.abs-play-button
+		
+		include _sections/also
+	include _sections/questions-usual
+	
+block scripts
+	include _misc/scripts

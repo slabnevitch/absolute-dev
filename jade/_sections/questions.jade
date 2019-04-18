@@ -1,0 +1,46 @@
+section.questions
+	.wrapper
+		img.questions-img(data-src="img/group.png", alt="")
+		
+		.questions-left
+			.title-wrapper.title-wrapper--numbered
+				.title-number 08
+				h2 Есть вопросы? 
+					br
+					| Напишите нам!
+
+			.questions-info
+				p #[strong Отправьте вопрос и мы свяжемся с вами в ближайшее рабочее время пн-пт с 9.00 до 20.00,] 
+					br
+					| чтобы подробно 
+					br
+					| рассказать обо всем, что вас интересует.
+
+				.questions-info__bottom Или задайте вопрос по телефону 
+					a(href="tel:88001234567") 8 800 123-45-67
+		
+		.questions-right
+			form.abs-form(action="#")
+				label.abs-form-label
+					span.abs-form-label-name Ваше имя
+					input.abs-form-input(type="text", name="" placeholder="Иван например")
+
+				label.abs-form-label
+					span.abs-form-label-name Ваш телефон
+					input.abs-form-input(type="text", name="" placeholder="+7 (___) ___-__-__")
+
+				label.abs-form-label
+					span.abs-form-label-name E-mail
+					input.abs-form-input(type="text", name="" placeholder="your@mail")
+
+				label.abs-form-label
+					span.abs-form-label-name Ваш вопрос
+					input.abs-form-input(type="text", name="")
+
+				.abs-form__custom-policy
+					label.abs-form-custom
+						input.abs-form-check(type="checkbox", name="" checked required)
+						span.abs-form__custom-chek
+					span.abs-form__policy Я согласен с #[a(href="#") Политикой конфидициальности]
+
+				button.button.button-wide.button-active-to-wt(type="submit") Получить консультацию

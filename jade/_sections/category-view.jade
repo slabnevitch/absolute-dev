@@ -1,0 +1,60 @@
+section.category-view
+	.wrapper
+		.category-view__menu-wrap
+			- var navs = ['Промышленные ворота', 'Противопожарные ворота', 'Гаражные ворота', 'Шлагбаумы и приводы', 'Двери', 'Роллетные системы', 'Перегрузочное оборудование'];
+
+			- var subnavs = ['Секционные ворота', 'Панорамные ворота', 'Рулонные ворота', 'Скоростные ворота', 'Складчатые ворота', 'Звукоизоляционные ворота'];
+			
+			ul.category-view__menu.acordeon-list
+				each nav in navs
+					li.acordeon-item.acordeon-item-with-sublist
+						a(href="#").acordeon-link= nav
+						ul.category-view__submenu.acordeon-sublist
+							each sub in subnavs
+								li.acordeon-subitem
+									a(href="")= sub
+									ul
+										li
+											a(href="") Алютех
+										li
+											a(href="") Дорхан
+										li
+											a(href="") Херман
+
+			.category-view__banner
+				img.category-view__banner-img(data-src="img/banner-1.jpg", alt="")
+
+			.category-view__banner
+				img.category-view__banner-img(data-src="img/banner-2.jpg", alt="")
+
+		.category-view__tiles
+			.category-view__title Секционные ворота проверенных производителей
+			.category-view__filter
+				form.abs-form(action="")
+					label.abs-form-custom
+						input.abs-form-check(type="checkbox", name="" checked)
+						span.abs-form__custom-chek
+						span.category-view__filter-key Все
+
+					label.abs-form-custom
+						input.abs-form-check(type="checkbox", name="")
+						span.abs-form__custom-chek
+						span.category-view__filter-key
+							img.category-view__filter-img(data-src="img/diler-logos/1.png", alt="")
+
+					label.abs-form-custom
+						input.abs-form-check(type="checkbox", name="")
+						span.abs-form__custom-chek
+						span.category-view__filter-key
+							img.category-view__filter-img(data-src="img/diler-logos/3.png", alt="")
+
+					label.abs-form-custom
+						input.abs-form-check(type="checkbox", name="")
+						span.abs-form__custom-chek
+						span.category-view__filter-key
+							img.category-view__filter-img(data-src="img/diler-logos/4.png", alt="")
+
+			.category-view__cards.wrapper-fluid
+				- for (var i=0; i < 9; i++)
+					include ../_includes/product-card-category
+	

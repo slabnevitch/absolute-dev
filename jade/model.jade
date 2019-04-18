@@ -1,0 +1,114 @@
+extends _misc/main
+
+block title
+	| Промышленные-секционные ворота
+
+block content
+	section.model-product
+		.wrapper.wrapper-jcc
+			ul.breadcrumbs
+					li
+						a(href="") Главная 
+					li
+						a(href="") Промышленные секционные ворота
+					li
+						a(href="") Алютех Протренд
+					li.active
+						a(href="") Промышленные ворота
+		
+		.wrapper.wrapper-jcc
+			.model-product__view
+				.model-product__display
+					- for (var i=0; i < 5; i++)
+						.model-product__display-slide
+							img(data-lazy="img/model/model-disp.jpg", alt="").model-product__display-img
+					
+				.model-product__nav
+					- for (var i=0; i < 5; i++)
+						.model-product__nav-slide
+							img(data-lazy="img/model/model-nav.jpg", alt="").model-product__nav-img
+			
+			.model-product__info
+				.model-product__title Промышленные секционные ворота Alutech Protrend
+				.model-product__info-text
+					.model-product__chars
+						.model-product__chars-row
+							.model-product__chars-key ширина проема:
+							.abs-select-wrap
+								select#(name="")
+									option(value="" selected="selected") 2 000
+									option(value="") 2 000
+									option(value="") 2 000
+									option(value="") 2 000
+									option(value="") 2 000
+
+						.model-product__chars-row
+							.model-product__chars-key Высота проема:
+							.abs-select-wrap
+								select#(name="")
+									option(value="" selected="selected") 2 200
+									option(value="") 2 000
+									option(value="") 2 000
+									option(value="") 2 000
+									option(value="") 2 000
+
+						.model-product__chars-row
+							.model-product__chars-key Цвет:
+							.abs-select-wrap
+								select#(name="")
+									option(value="" selected="selected") Серый RAL 7004
+									option(value="") Серый RAL 7004
+									option(value="") Серый RAL 7004
+									option(value="") Серый RAL 7004
+									option(value="") Серый RAL 7004
+
+						.model-product__chars-row
+							.model-product__chars-key панель:
+							.abs-select-wrap
+								select#(name="")
+									option(value="" selected="selected") Волна
+									option(value="") Волна
+									option(value="") Волна
+									option(value="") Волна
+									option(value="") Волна
+					.model-product__price-block
+						.model-product__price 27 800 Р
+						a(href="#").button.button-with-arrow Заказать
+							.button-arrow
+								+icon('arrow-left')
+
+				.model-product__features
+					.model-product__features-title Наши преимущества:
+					.model-product__features-content
+						.model-product__features-row
+							.model-product__features-item Реальные сроки исполнения договора
+							.model-product__features-item Любые варианты дизайна
+						
+						.model-product__features-row
+							.model-product__features-item Скидки: с нами всегда уместен торг
+							.model-product__features-item Гарантийное обслуживание - 1 год
+
+						.model-product__features-row
+							.model-product__features-item Только оригинальные комплектующие
+							.model-product__features-item Бесплатный замер
+	
+	include _sections/parameters
+	
+	section.delivery-inst.delivery-inst--bordered
+		include _includes/delivery-items
+
+	section.automatic
+		.wrapper
+			.title-wrapper.title-wrapper-wide.text-center
+				h2.abs-title-black Автоматика для ворот Alutech Protrend
+
+		.wrapper.no-pd-480
+			.cards-slider
+				- for (var i=0; i < 8; i++)
+					.cases-slider__slide
+						include _includes/product-card-title
+
+	include _sections/questions-usual
+
+block scripts
+	include _misc/scripts

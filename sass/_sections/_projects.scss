@@ -1,0 +1,135 @@
+/*--projects--*/
+.projects{
+	position: relative;
+	padding-bottom: rem(72px);
+	background-color: $l-blue;
+
+	.abs-section-ellipse-left{
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 0;
+	}
+	.wrapper{
+		position: relative;
+		z-index: 1;
+
+		.title-wrapper{
+			h2{
+				margin-bottom: rem(43px);
+			}
+		}
+
+		.projects__tabs-list,
+		.projects__tabs-content{
+			@include col();
+			@include col-16();
+			@include col-bigger-18();
+		}
+		.projects__tabs-list{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: rem(35px);
+
+			.tabs__item{
+				list-style-type: none;
+
+				&--active{
+					.tabs__link{
+						color: $accent-l;
+						
+					}
+				}
+			}
+
+			.tabs__link{
+				color: #346789;
+
+				&:hover, &:active{
+					color: $accent-l;
+
+				}
+				
+			}
+		}
+	}
+	.projects-tabs{
+		.abs-button-wrapper{
+			.button{
+				width: 500px;
+			}
+			
+		}
+	}
+	.projects__tabs-content{
+		margin-bottom: rem(30px);
+
+		.tabs-mob-toggle{
+			display: none;
+		}
+	}
+
+	&--usual{
+		padding-top: rem(102px);
+		padding-bottom: rem(110px);
+		background-color: transparent;
+	}
+}
+
+@media only screen and (max-width : 1400px){
+	.projects .wrapper .projects__tabs-list{
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+	.projects .wrapper .projects__tabs-list .tabs__item{
+		margin-bottom: 10px;
+		margin-right: 15px;
+	}
+}
+
+@media only screen and (max-width : 1200px){
+	.projects .abs-section-ellipse-left{
+		display: none !important;
+	}
+}
+@media only screen and (max-width : 980px){
+	.projects .wrapper .projects__tabs-content{
+		.tabs-mob-toggle{
+			display: block;
+		}
+	}
+	// .projects .wrapper .projects__tabs-list{
+	// 	display: none;
+	// }
+	.projects .wrapper .projects__tabs-list{
+		display: block;
+	}
+	.projects .wrapper .projects__tabs-list .tabs__link{
+		display: block;
+		margin-bottom: 15;
+		text-align: center;
+
+		color: #346789;
+
+		&:hover, &:active, &.active{
+			color: $accent-l;
+
+		}
+	}
+}
+
+@media only screen and (max-width : 768px){
+	.projects .projects-tabs .abs-button-wrapper .button{
+		width: 400px;
+	}
+}
+@media only screen and (max-width : 480px){
+	.projects .projects-tabs .abs-button-wrapper .button{
+		width: 100%;
+	}
+}
+/*--end projects--*/

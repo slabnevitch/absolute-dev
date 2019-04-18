@@ -1,0 +1,172 @@
+.abs-popup#callback-popup.mfp-hide.white-popup-block
+	.abs-popup__header
+		h2 Заказать звонок
+		.abs-popup__sib-title Оставьте заявку
+		p и мы вам обязательно перезвоним
+
+	form.abs-form.submit-to-thanks(action="#")
+		label.abs-form-label
+			span.abs-form-label-name Ваше имя
+			input.abs-form-input(type="text", name="" placeholder="Иван например")
+
+		label.abs-form-label
+			span.abs-form-label-name Ваш телефон
+			input.abs-form-input(type="text", name="" placeholder="+7 (___) ___-__-__")
+		
+		.abs-form__custom-policy
+			label.abs-form-custom
+				input.abs-form-check(type="checkbox", name="" checked required)
+				span.abs-form__custom-chek
+			span.abs-form__policy Я согласен с #[a(href="#") Политикой конфидициальности]
+
+			button.button.button-wide(type="submit") Получить консультацию
+
+.abs-popup#order-popup.mfp-hide.white-popup-block
+	.abs-popup__header
+		h2 Оставить заявку
+		.abs-popup__sib-title Оставьте заявку на замер
+		p и мы вам обязательно перезвоним
+
+	form.abs-form.submit-to-thanks(action="#")
+		label.abs-form-label
+			span.abs-form-label-name Ваше имя
+			input.abs-form-input(type="text", name="" placeholder="Иван например")
+
+		label.abs-form-label
+			span.abs-form-label-name Ваш телефон
+			input.abs-form-input(type="text", name="" placeholder="+7 (___) ___-__-__")
+		
+		.abs-form__custom-policy
+			label.abs-form-custom
+				input.abs-form-check(type="checkbox", name="" checked required)
+				span.abs-form__custom-chek
+			span.abs-form__policy Я согласен с #[a(href="#") Политикой конфидициальности]
+
+			button.button.button-wide(type="submit") Оставить заявку
+
+.abs-popup#question-popup.mfp-hide.white-popup-block
+	.abs-popup__header
+		h2 Задать вопрос
+		.abs-popup__sib-title Оставьте заявку
+		p и мы вам обязательно перезвоним
+
+	form.abs-form.submit-to-thanks(action="#")
+		label.abs-form-label
+			span.abs-form-label-name Ваше имя
+			input.abs-form-input(type="text", name="" placeholder="Иван например")
+
+		label.abs-form-label
+			span.abs-form-label-name Ваш телефон
+			input.abs-form-input(type="text", name="" placeholder="+7 (___) ___-__-__")
+
+		label.abs-form-label
+			span.abs-form-label-name Добавить ссылку
+			input.abs-form-input(type="text", name="" placeholder="Ссылка на ресурс")
+
+		label.abs-form-label.abs-form-label--file
+			input.abs-form-file(type="file", name="")
+			span.abs-form-label-text Прикрепить файл
+
+		.abs-form__custom-policy
+			label.abs-form-custom
+				input.abs-form-check(type="checkbox", name="" checked required)
+				span.abs-form__custom-chek
+			span.abs-form__policy Я согласен с #[a(href="#") Политикой конфидициальности]
+
+			button.button.button-wide(type="submit") Задать вопрос
+
+
+.abs-popup#expect-popup.mfp-hide.white-popup-block
+	.abs-popup__header
+		h2 Получить консультацию и расчет
+		.abs-popup__sib-title Оставьте заявку
+		p и мы вам обязательно перезвоним
+
+	form.abs-form.submit-to-thanks(action="#")
+		label.abs-form-label
+			span.abs-form-label-name Ваше имя
+			input.abs-form-input(type="text", name="" placeholder="Иван например")
+
+		label.abs-form-label
+			span.abs-form-label-name Ваш телефон
+			input.abs-form-input(type="text", name="" placeholder="+7 (___) ___-__-__")
+
+		label.abs-form-label
+			span.abs-form-label-name Ваше сообщение
+			input.abs-form-input(type="text", name="" placeholder="Текст соообщения")
+
+		label.abs-form-label.abs-form-label--file
+			input.abs-form-file(type="file", name="")
+			span.abs-form-label-text Прикрепить файл
+
+		.abs-form__custom-policy
+			label.abs-form-custom
+				input.abs-form-check(type="checkbox", name="" checked required)
+				span.abs-form__custom-chek
+			span.abs-form__policy Я согласен с #[a(href="#") Политикой конфидициальности]
+
+			button.button.button-wide(type="submit") Получить консультацию
+
+.abs-popup.abs-popup--regard#regard-popup.mfp-hide.white-popup-block
+	.abs-popup__header
+		.abs-popup__logo
+			.abs-logo
+				a(href="#")
+					img(src="img/logo-white.png", alt="alt")
+				p 
+					| Продажа, монтаж и сервис
+					br
+					| ворот, дверей и автоматики
+	
+	h2 спасибо 
+		br
+		| за оказанное доверие
+	p Мы свяжемся с вами в ближайшее рабочее время 
+		br
+		| ПН-СБ с 8:00 до 20:00
+	p Если у вас есть срочный вопрос, звоните по телефону 
+		br
+		| #[a(href="tel:+7(499)6811168") +7 (499) 68 111 68]
+
+.abs-popup.abs-popup-object#object-popup.mfp-hide.white-popup-block
+	.abs-popup-object__top
+		.wrapper-fluid
+			.abs-popup-object__left
+				.object-display
+					- for (var i=0; i < 4; i++)
+						.object-display__slide
+							img(src="img/object-popup/display.jpg", alt="").object-display__img
+
+				.object-nav
+					- for (var i=0; i < 4; i++)
+						.object-nav__slide
+							img(src="img/object-popup/nav.jpg", alt="").object-nav__img
+
+			.abs-popup-object__right
+				.object-title Объект 1
+
+				p.object-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+				p.object-text Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget. 
+
+				ul.object-links
+					li
+						a(href="") Промышленные
+					li 
+						a(href="") Секционные ворота
+					li
+						a(href="") Дорхан Шлагбаум
+					li
+						a(href="") Дорхан
+
+				.object-contact Если у вас есть срочный вопрос, звоните по телефону  #[a(href="#") +7 (499) 68 111 68]
+
+	.abs-popup-object__bottom
+		.wrapper-fluid
+			.abs-popup-object__sertif
+				img.object-sertif-img(src="img/object-popup/sertif.jpg", alt="")
+			
+			.abs-popup-object__descr
+				p.object-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et
+				p.object-text.object-signature С уважением Васильев Б.Г.
+
+

@@ -1,0 +1,151 @@
+/*--timeframe--*/
+.timeframe{
+	position: relative;
+	padding-top: rem(60px);
+	padding-bottom: rem(174px);
+	background: center no-repeat;
+	background-size: cover;
+	overflow: hidden;
+
+	.timeframe-ellipse{
+		position: absolute;
+
+		&--left{
+			top: 0;
+			left: 0;
+
+		}
+		&--right{
+			bottom: 0;
+			right: 0;
+		}
+	}
+	.timeframe-visual{
+		@include absolute-center;
+		max-width: initial;
+		max-height: initial;
+	}
+	.timeframe-top{
+		position: relative;
+		z-index: 1;
+
+		.title-wrapper{
+			margin-bottom: rem(67px);
+			h2{
+				margin-bottom: 0;
+			}
+		}
+	}
+	.timeframe-content{
+		position: relative;
+		z-index: 1;
+		justify-content: center;
+
+		.timeframe-content__inner{
+			@include col();
+			@include col-16();
+			@include col-lg_1500-18();
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+
+			justify-content: space-between;
+		}
+		.timeframe-column{
+
+			&--left{
+				text-align: right;
+				.timeframe-item{
+					justify-content: flex-end;
+				}
+
+				.timeframe-item__icon{
+					margin-left: 25px;
+				}
+			}
+
+			&--right{
+				.timeframe-item__icon{
+					margin-right: 25px;
+				}
+
+			}
+
+			.timeframe-item{
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				align-items: center;
+				margin-bottom: rem(61px);
+
+				&:last-of-type{
+					margin-bottom: 0;
+				}
+			
+
+				&:hover, &:active{
+					.timeframe-item__icon-inner{
+						box-shadow: 0px 10px 20px rgba(226, 179, 63, 0.5);
+						transform: translateY(-44px);
+						background-color: $accent-l;
+
+					}
+					.timeframe-item__icon-round{
+						&--1{
+							transform: translateY(-20px);
+						}
+
+					}
+				}
+			}
+			.timeframe-item__icon{
+				@extend .company-item__icon;
+				width: 93px;
+				height: 93px;
+				margin-bottom: 0;
+			}
+			.timeframe-item__icon-inner{
+				@extend .company-item__icon-inner;
+				width: 67px;
+				height: 67px;
+				background-size: 65%;
+
+			}
+			.timeframe-item__icon-round{
+				@extend .company-item__icon-round;
+				width: 67px;
+				height: 67px;
+
+			}
+			.timeframe-item__icon-round--1{
+				@extend .company-item__icon-round--1;
+			}
+			.timeframe-item__icon-round--2{
+				@extend .company-item__icon-round--2;
+			}
+
+			.timeframe-item__text{
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+@media only screen and (max-width : 1100px){
+	.timeframe{
+		background-color: #EAF7F9;
+		background-image: none !important;
+	}
+	.timeframe .timeframe-content .timeframe-content__inner{
+		justify-content: space-around;
+	}
+}
+@media only screen and (max-width : 980px){
+	.timeframe{
+		display: none !important;
+	}
+}
+/*--end timeframe--*/
