@@ -99,6 +99,7 @@
 		flex-wrap: wrap;
 	}
 	.objects-item{
+			position: relative;
 			width: calc(33.333333% - 20px);
 			margin-left: 10px;
 			margin-right: 10px;

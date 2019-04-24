@@ -6,23 +6,23 @@ section.spec-actions
 		.spec-actions__content
 			- for (var i=0; i < 2; i++)
 				a(href="#").spec-actions__item
-					.spec-actions__img-wrap
+					.spec-actions__img-wrap(data-src="img/spec-actions/1.jpg")
 						.spec-actions__sale -3%
-						img(src="img/spec-actions/1.jpg", alt="alt").spec-actions__img
+						//- img(src="img/spec-actions/1.jpg", alt="alt").spec-actions__img
 
 					.spec-actions__caption Социальная акция. Скидка 
 						br
 						| пенсионерам 3%
 
 				a(href="#").spec-actions__item
-					.spec-actions__img-wrap
+					.spec-actions__img-wrap(data-src="img/spec-actions/2.jpg")
 						.spec-actions__sale -3%
-						img(src="img/spec-actions/2.jpg", alt="alt").spec-actions__img
+						//- img(src="img/spec-actions/2.jpg", alt="alt").spec-actions__img
 
 					.spec-actions__caption Скидка 3% при заказе забора
 
 				a(href="#").spec-actions__item
-					.spec-actions__img-wrap
-						img(src="img/spec-actions/2.jpg", alt="alt").spec-actions__img
+					.spec-actions__img-wrap(data-src="img/spec-actions/3.jpg")
+						//- img(src="img/spec-actions/2.jpg", alt="alt").spec-actions__img
 
 					.spec-actions__caption Марафон подарков

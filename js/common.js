@@ -258,6 +258,52 @@ jQuery(function() {
 		// end section SERVICES
 
 
+		// section COMPANY
+		$('.company-item__icon').tooltipster({
+				// trigger: 'hover',
+				// side: 'bottom',
+				interactive: true,
+				arrow: false,
+				viewportAware: false,
+				maxWidth: 361,
+				trackOrigin: true,
+				contentAsHTML: true,
+				functionBefore: function() {
+
+					if(screen.width < 768){
+						return false;
+					}
+
+				},
+				functionReady: function(instance, helper) {
+					
+					helper.tooltip.classList.add('item-icon-tooltip');
+					var tHeight = helper.tooltip.offsetHeight,
+							origin = helper.origin,
+							originTop = helper.origin.getBoundingClientRect().top,
+							originHalfHeight = helper.origin.offsetHeight/2;
+
+					helper.tooltip.style.top = (originTop + originHalfHeight) - tHeight/2 + document.documentElement.scrollTop + 'px';
+					
+					console.log(originTop);
+					console.log('scroll top ' + document.documentElement.scrollTop);
+				},
+				functionPosition: function(instance, helper, position){
+					// position.coord.top = helper.origin.getBoundingClientRect().top + (helper.origin.offsetHeight/2);
+					position.coord.left = helper.origin.getBoundingClientRect().left + (helper.origin.offsetWidth/2) + 30;
+					
+					// if($('.header').hasClass('header--fixed')){
+					// 	// helper.tooltip.classList.add('info-tip--mobile');
+					// 	var posYHelper = helper.origin.getBoundingClientRect().top;
+					// 	position.coord.top = posYHelper - 30;
+					// }
+					return position;
+				}
+
+			});
+		// end section COMPANY
+
+
 		// section HISTORY
 		var objectDisplayOpt = {
 			dots: false,

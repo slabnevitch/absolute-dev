@@ -51,6 +51,8 @@
 				max-width: 458px;
 				margin-bottom: 33px;
 				overflow: hidden;
+				background:  0 0 no-repeat;
+				background-size: cover;
 			}
 			.spec-actions__sale{
 				height: 190px;
@@ -67,11 +69,11 @@
 				line-height: 300px;
 				color: #000;
 			}
-			.spec-actions__img{
-				@include absolute-center;
-				top: 0;
-				transform: translateX(-50%);
-			}
+			// .spec-actions__img{
+			// 	@include absolute-center;
+			// 	top: 0;
+			// 	transform: translateX(-50%);
+			// }
 			.spec-actions__caption{
 				font-size: 24px;
 				font-family: $r-l;
