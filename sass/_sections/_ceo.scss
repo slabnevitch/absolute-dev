@@ -29,7 +29,9 @@
 			justify-content: space-between;
 			flex-wrap: wrap;
 			.ceo-content__item{
-				width: 49%;
+				// width: 49%;
+				column-gap: 30px;
+  			column-count:2;
 				font-family: $r-l;
 				line-height: 25px;
 			}
@@ -47,8 +49,7 @@
 
 @media only screen and (max-width : 768px){
 	.ceo .wrapper .ceo-content .ceo-content__item{
-		width: 100%;
-		margin-bottom: 15px;
+		column-count: 1;
 	}
 }
 /*--end ceo--*/

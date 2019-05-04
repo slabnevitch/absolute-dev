@@ -30,12 +30,18 @@
 			display: -o-flex;
 			display: flex;
 			align-items: center;
+			flex-wrap: wrap;
 
 			.abs-form-label,
 			.button{
 				@include col();
 				@include col-6();
 				@include col-md-18();
+			}
+
+			.abs-form__custom-policy{
+				width: 100%;
+				text-align: center;
 			}
 
 			.abs-form-input{
@@ -64,6 +70,10 @@
 			}
 
 			.abs-form .abs-form-label-name{
+				color: #000;
+			}
+			.abs-form .abs-form__policy,
+			.abs-form .abs-form__policy a{
 				color: #000;
 			}
 		}
