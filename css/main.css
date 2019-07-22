@@ -8888,6 +8888,82 @@ ul, li {
     width: 100%; } }
 
 /*--end also--*/
+.scheme {
+  padding-top: 2.77778rem;
+  padding-bottom: 2.11111rem;
+  background-color: #EDEDED; }
+  .scheme .wrapper .title-wrapper {
+    margin-bottom: 3.38889rem; }
+  .scheme .wrapper h2 {
+    margin-bottom: 5px; }
+  .scheme .wrapper .abs-subtitle {
+    color: #000; }
+  .scheme .scheme-content {
+    position: relative;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+    .scheme .scheme-content .scheme-content__img {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      position: absolute;
+      margin-left: 100px; }
+      .scheme .scheme-content .scheme-content__img img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+    .scheme .scheme-content .scheme-content__list {
+      position: relative;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-left: 15px;
+      margin-right: 15px;
+      word-wrap: break-word;
+      width: -webkit-calc(88.88889% - 30px);
+      width: calc(88.88889% - 30px);
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      columns: 2;
+      -webkit-column-gap: 40%;
+      -moz-column-gap: 40%;
+      column-gap: 40%;
+      counter-reset: num; }
+      .scheme .scheme-content .scheme-content__list li {
+        position: relative;
+        list-style-type: none;
+        padding-top: 7px;
+        padding-left: 51px;
+        margin-bottom: 64px; }
+        .scheme .scheme-content .scheme-content__list li:before {
+          content: counter(num);
+          counter-increment: num;
+          position: absolute;
+          width: 33px;
+          height: 33px;
+          left: 0;
+          top: 0;
+          font-size: 18px;
+          line-height: 33px;
+          text-align: center;
+          font-family: "RobotoBold", sans-serif;
+          color: #fff;
+          -webkit-border-radius: 50em;
+          border-radius: 50em;
+          background: #68A7CF;
+          border: 4px solid #FFFFFF; }
+      .scheme .scheme-content .scheme-content__list .active:before {
+        background-color: #FEC947; }
+
 /*--popups--*/
 .abs-popup {
   width: 100%;

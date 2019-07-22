@@ -1,0 +1,15 @@
+section.scheme
+	.wrapper
+		.title-wrapper.title-wrapper-wide.text-center
+			h2.abs-title-black более 14 лет
+			.abs-subtitle продаем и устанавливаем шлагбаумы
+
+	.wrapper.scheme-content
+		- var features = ['Нaкладка на кожух стрелы с логотипом', 'Болты с внутренним шестигранником', 'Кожух стрелы', 'Болты с внутренним шестигранником', 'Пластина крепления стрелы', 'Стрела от 4 до 6 м (опционально)', 'Стойка шлагбаума', 'Боковая крышка', 'Блок управления', 'Болты с внутренним шестигранником', 'Верхняя крышка корпуса', 'Светодиодная лампа'];
+
+		.scheme-content__img
+			img(src="img/scheme.png", alt="alt")
+
+		ul.scheme-content__list
+			each item in features
+				li= item
