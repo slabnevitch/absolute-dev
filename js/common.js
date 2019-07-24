@@ -703,6 +703,48 @@ jQuery(function() {
 		});
 		// end section MODEL-PRODUCT
 
+		// section SCHEME
+			(function schemeTimer() {
+				var lis = $('.scheme-content__list li'),
+					interval,
+					lisCount = lis.length,
+					liIndex = 0;
+
+				this.init = function() {
+					console.log('scheme init');
+					this.classDistribution();
+					this.startInterval();
+
+				},
+				this.startInterval = function() {
+					interval = setInterval(function() {
+						this.increment();
+					}, 2000);
+				},
+				this.increment = function() {
+						liIndex++;
+
+						if(liIndex > lisCount){
+							liIndex = 0;
+						}
+
+						this.classDistribution();
+						console.log(liIndex);
+
+					},
+				this.classDistribution = function() {
+					lis.eq(liIndex)
+						.addClass('active')
+						.siblings()
+						.removeClass('active');
+				}
+
+				this.init();
+
+				})();
+				
+		// end section SCHEME
+
 	});
 
 	

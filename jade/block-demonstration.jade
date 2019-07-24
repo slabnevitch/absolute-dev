@@ -1,0 +1,12 @@
+extends _misc/main
+
+block title
+	| Демонстрация нового блока
+
+block content
+	include _sections/scheme
+		
+block scripts
+	include _misc/scripts
+	script(src="js/abs-map.js")
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_NAmCu9dm16a9i0oeX0T6rBQFgObeiZA&callback=initMap" async defer)
