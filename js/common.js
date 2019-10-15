@@ -1,6 +1,6 @@
 jQuery(function() {
 	jQuery(document).ready(function() {
-		svg4everybody();
+		// svg4everybody();
 
 		$('[data-src]').Lazy();
 
@@ -213,11 +213,13 @@ jQuery(function() {
 				this.init =	function() {
 					console.log('toggler');
 					this.events();
+					this.lineCalculation();
 				},
 
 				this.events = function() {
 					$marks.hover(this.markOver, this.markOut);
 					$features.hover(this.featureOver, this.featureOut);
+					$(window).on('resize', this.winResize);
 				},
 
 				this.markOver = function() {
@@ -276,7 +278,44 @@ jQuery(function() {
 						
 					}
 					
-				} 
+				},
+
+				this.lineCalculation = function() {
+					var floatMarks = document.querySelectorAll('.services-mark__inner');
+
+					[].forEach.call(floatMarks, function(el, i){
+						console.log('eli= ' + floatMarks[i]);
+						var oneMarkTop = el.getBoundingClientRect().top,
+						oneMarkLeft = el.getBoundingClientRect().left,
+						oneMarkHeight = el.getBoundingClientRect().height,
+		      
+				        appropriate = document.querySelectorAll('.services-feature__icon-inner')[i],
+				        
+				        appropriateTop = appropriate.getBoundingClientRect().top,
+				        appropriateLeft = appropriate.getBoundingClientRect().left,
+				        appropriateIconHeight = appropriate.getBoundingClientRect().height,
+				        
+				        katetA = appropriateLeft - oneMarkLeft,
+				        katetB = oneMarkTop - appropriateTop - appropriateIconHeight/3,
+				        katetBAbs = Math.abs(katetB),
+				        hypotenuse = Math.sqrt(Math.pow(katetA, 2) + Math.pow(katetBAbs, 2)),
+				        tanA = katetA / katetBAbs,
+				        angleA = Math.atan(tanA),
+				        gradsA = angleA * 57.3,
+				        angleBGrads = 180 - 90 - gradsA,
+				        line = el.querySelector('.services-mark__line');
+
+				        if(katetB > 0){
+				        	angleBGrads = -angleBGrads;
+				        }
+
+				        line.style.width = hypotenuse - appropriateIconHeight/2 + 'px';
+				        line.style.transform = 'rotate('+ angleBGrads + 'deg)';
+				    });
+			    },
+			    this.winResize = function() {
+			    	_self.lineCalculation();
+			    }
 			}
 
 			var servToggle = new servicesToggler();

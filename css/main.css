@@ -5057,46 +5057,29 @@ ul, li {
         .services .wrapper .services-left .services-mark .services-mark__line {
           display: none;
           position: absolute;
-          top: 50%;
-          left: 100%;
-          width: 405px;
           height: 1px;
+          left: 100%;
+          top: 50%;
+          width: 1px;
           background-color: #fff;
-          -webkit-transform-origin: left;
-          -ms-transform-origin: left;
-          transform-origin: left; }
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          -webkit-transform-origin: left center;
+          -ms-transform-origin: left center;
+          transform-origin: left center; }
         .services .wrapper .services-left .services-mark--1 {
           top: 170px;
           left: 152px; }
-          .services .wrapper .services-left .services-mark--1 .services-mark__line {
-            -webkit-transform: rotate(-24deg);
-            -ms-transform: rotate(-24deg);
-            transform: rotate(-24deg);
-            width: 705px; }
         .services .wrapper .services-left .services-mark--2 {
           top: 370px;
           left: 50%; }
-          .services .wrapper .services-left .services-mark--2 .services-mark__line {
-            -webkit-transform: rotate(-32deg);
-            -ms-transform: rotate(-32deg);
-            transform: rotate(-32deg);
-            width: 550px; }
         .services .wrapper .services-left .services-mark--3 {
           top: 130px;
           left: 455px; }
-          .services .wrapper .services-left .services-mark--3 .services-mark__line {
-            -webkit-transform: rotate(16deg);
-            -ms-transform: rotate(16deg);
-            transform: rotate(16deg);
-            width: 355px; }
         .services .wrapper .services-left .services-mark--4 {
-          top: 80%;
-          left: 80%; }
-          .services .wrapper .services-left .services-mark--4 .services-mark__line {
-            -webkit-transform: rotate(-12deg);
-            -ms-transform: rotate(-12deg);
-            transform: rotate(-12deg);
-            width: 260px; }
+          top: 467px;
+          right: 50px; }
     .services .wrapper .services-right {
       padding-left: 68px;
       position: relative;
@@ -5175,8 +5158,6 @@ ul, li {
         font-size: 24px; }
 
 @media only screen and (max-width: 1600px) {
-  .services .wrapper .services-left .services-mark .services-mark__line {
-    display: none !important; }
   .services .wrapper .services-left .title-wrapper {
     padding-left: 0; } }
 
@@ -5191,6 +5172,10 @@ ul, li {
     font-size: 20px; }
   .services .wrapper .services-right .services-feature {
     margin-bottom: 30px; } }
+
+@media only screen and (max-width: 1200px) {
+  .services .wrapper .services-left .services-mark .services-mark__line {
+    display: none !important; } }
 
 @media only screen and (max-width: 1100px) {
   .services {
